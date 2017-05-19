@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/project-4/wp-content/plugins/query-monitor/wp-content/db.php
