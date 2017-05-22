@@ -36,4 +36,27 @@
 
 /* About page */
 
+#post-23 {
+  margin: 0;
+  
+  .entry-header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0, .4),rgba(0,0,0, .4)), url('../../images/about-hero.jpg')no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 30rem;
 
+    .entry-title {
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+
+  .entry-content {
+    margin: $base__space-unit*2 $base__space-unit*7;
+    width: $base__space-unit*26;
+  }
+}

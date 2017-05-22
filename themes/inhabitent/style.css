@@ -745,3 +745,24 @@ object {
   display: none; }
 
 /* About page */
+#post-23 {
+  margin: 0; }
+  #post-23 .entry-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/about-hero.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 30rem; }
+    #post-23 .entry-header .entry-title {
+      color: #fff;
+      text-transform: uppercase; }
+  #post-23 .entry-content {
+    margin: 3rem 10.5rem;
+    width: 39rem; }
