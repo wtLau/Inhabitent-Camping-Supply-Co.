@@ -3,12 +3,46 @@
 --------------------------------------------------------------*/
 
 .widget {
-	margin: 0 0 $base__space-unit;
+	margin: $base__space-unit;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
+}
+
+.widget-area {
+	background-image: url('../../images/dark-wood.png');
+	background-size: contain;
+	background-repeat: repeat;
+  display: flex;
+  flex-flow: row nowrap;
+	padding: $base__space-unit;
+	h2 {
+		text-transform: uppercase;
+		color:$color__widget-header;
+    @include font-size;
+	}
+	#text-4 {
+		background-image: url('../../images/logos/inhabitent-logo-text.svg');
+		background-repeat: no-repeat;
+		background-size: 14rem 7rem;
+		background-position: top right;
+		width: 50%;
+	}
+  .widget_text {
+    display: flex; 
+    flex-flow: column nowrap;
+		color: $color__background-body;
+    
+    .textwidget {
+      display: flex;
+      flex-flow: column nowrap;
+      p {
+        margin: .5rem;
+      }
+		}	
+  }
 }
 
 /* Search widget. */

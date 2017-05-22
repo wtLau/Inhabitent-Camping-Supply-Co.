@@ -1,9 +1,9 @@
 /*!
-Theme Name: Inhabitant Theme
+Theme Name: RED Starter Theme
 Theme URI: http://underscores.me/
-Author: Brian Lau
+Author: RED Academy
 Author URI: http://www.redacademy.com
-Description: A WordPress Inhabitant theme for project-4.
+Description: A WordPress starter theme for RED Academy students.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -231,7 +231,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: Merriwather, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -406,6 +406,16 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+/* logo */
+.header-logo {
+  background: url("../../images/logos/inhabitent-logo-tent-white.svg") no-repeat;
+  background-size: 2.5rem 1.5rem;
+  margin: none;
+  text-indent: 100%;
+  height: 1.5rem;
+  width: 2.5rem;
+  overflow: hidden; }
+
 /* Links */
 a {
   color: royalblue; }
@@ -419,70 +429,81 @@ a {
     outline: 0; }
 
 /* Menus */
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5rem;
-      left: -999rem;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
+.site-header {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  /* Small menu. */ }
+  .site-header .main-navigation {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row-reverse wrap;
+        flex-flow: row-reverse wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    width: 100%;
+    padding: 5px 6rem; }
+    .site-header .main-navigation li {
+      padding-left: 1.5rem;
+      text-transform: uppercase; }
+    .site-header .main-navigation ul {
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding-left: 0; }
+      .site-header .main-navigation ul ul {
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        float: left;
+        position: absolute;
+        top: 1.5rem;
         left: -999rem;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
+        z-index: 99999; }
+        .site-header .main-navigation ul ul ul {
+          left: -999rem;
+          top: 0; }
+        .site-header .main-navigation ul ul li {
+          padding-left: 1.5rem; }
+          .site-header .main-navigation ul ul li:hover > ul,
+          .site-header .main-navigation ul ul li.focus > ul {
+            left: 100%; }
+        .site-header .main-navigation ul ul a {
+          width: 200px; }
+      .site-header .main-navigation ul li:hover > ul,
+      .site-header .main-navigation ul li.focus > ul {
+        left: auto; }
+    .site-header .main-navigation li {
+      float: left;
+      position: relative; }
+    .site-header .main-navigation a {
+      display: block;
+      text-decoration: none;
+      color: #fff; }
+  .site-header .menu-toggle,
+  .site-header .main-navigation.toggled ul {
+    display: block; }
+  @media screen and (min-width: 768px) {
+    .site-header .menu-toggle {
+      display: none; }
+    .site-header .main-navigation ul {
+      display: block; } }
+  .site-main .site-header .comment-navigation, .site-main
+  .site-header .posts-navigation, .site-main
+  .site-header .post-navigation {
+    margin: 0 0 1.5rem;
+    overflow: hidden; }
+  .site-header .comment-navigation .nav-previous,
+  .site-header .posts-navigation .nav-previous,
+  .site-header .post-navigation .nav-previous {
     float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5rem;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
+    width: 50%; }
+  .site-header .comment-navigation .nav-next,
+  .site-header .posts-navigation .nav-next,
+  .site-header .post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -545,10 +566,44 @@ a {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5rem;
+  margin: 1.5rem;
   /* Make sure select elements fit in widgets. */ }
   .widget select {
     max-width: 100%; }
+
+.widget-area {
+  background-image: url("../../images/dark-wood.png");
+  background-size: contain;
+  background-repeat: repeat;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  padding: 1.5rem; }
+  .widget-area h2 {
+    text-transform: uppercase;
+    color: #d99054;
+    font-size: 16px;
+    font-size: 1rem; }
+  .widget-area #text-4 {
+    background-image: url("../../images/logos/inhabitent-logo-text.svg");
+    background-repeat: no-repeat;
+    background-size: 14rem 7rem;
+    background-position: top right;
+    width: 50%; }
+  .widget-area .widget_text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    color: #fff; }
+    .widget-area .widget_text .textwidget {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap; }
+      .widget-area .widget_text .textwidget p {
+        margin: .5rem; }
 
 /* Search widget. */
 .widget_search .search-submit {
@@ -656,3 +711,37 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/*
+ * Hero Banner
+ */
+.content-area {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/home-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.site-main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-image: url("../../images/logos/inhabitent-logo-full.svg");
+  background-size: 100%;
+  height: 15rem;
+  width: 15rem;
+  margin: 0 auto;
+  background-position: center center; }
+
+.entry-header {
+  display: none; }
+
+.site-branding {
+  display: none; }
+
+/* About page */
