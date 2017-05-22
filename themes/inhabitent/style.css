@@ -718,7 +718,7 @@ object {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/home-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 30rem;
+  height: 100vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -757,12 +757,39 @@ object {
     -ms-flex-align: center;
         align-items: center;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/about-hero.jpg") no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 30rem; }
+    background-size: cover, cover;
+    background-position: center bottom;
+    height: 100vh; }
     #post-23 .entry-header .entry-title {
       color: #fff;
       text-transform: uppercase; }
-  #post-23 .entry-content {
-    margin: 3rem 10.5rem;
-    width: 39rem; }
+  #post-23 .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    #post-23 .container .entry-content {
+      margin: 3rem 10.5rem;
+      width: 39rem; }
+      #post-23 .container .entry-content h2 {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        text-transform: uppercase; }
+
+/* Footer */
+.site-info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: .7rem;
+  color: #fff;
+  background-image: url("../../images/dark-wood.png");
+  background-size: contain;
+  background-repeat: repeat; }

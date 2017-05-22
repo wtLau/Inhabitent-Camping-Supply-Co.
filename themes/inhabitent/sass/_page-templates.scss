@@ -7,11 +7,12 @@
  * Hero Banner
  */
 
+
  .content-area {
 	background-image: linear-gradient(rgba(0,0,0, .4), rgba(0,0,0, .4)), url('../../images/home-hero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 30rem;
+  height: 100vh;
   display: flex; 
   justify-content: center;
   align-items: center;
@@ -44,19 +45,45 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0,0,0, .4),rgba(0,0,0, .4)), url('../../images/about-hero.jpg')no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 30rem;
+    background: linear-gradient(rgba(0,0,0, .4),rgba(0,0,0, .4)), url('../../images/about-hero.jpg') no-repeat;
+    background-size: cover, cover;
+    background-position: center bottom;
+    height: 100vh;
 
     .entry-title {
       color: #fff;
       text-transform: uppercase;
     }
   }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  .entry-content {
-    margin: $base__space-unit*2 $base__space-unit*7;
-    width: $base__space-unit*26;
+    .entry-content {
+      margin: $base__space-unit*2 $base__space-unit*7;
+      width: $base__space-unit*26;
+
+      h2 {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+      }
+    }
   }
+}  
+
+
+
+/* Footer */
+
+.site-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .7rem;
+  color: $color__background-body;
+	background-image: url('../../images/dark-wood.png');
+	background-size: contain;
+	background-repeat: repeat;
 }
