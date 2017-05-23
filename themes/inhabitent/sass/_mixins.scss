@@ -11,3 +11,9 @@
 	margin-right: auto;
 }
 
+@mixin container-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row nowrap;
+}

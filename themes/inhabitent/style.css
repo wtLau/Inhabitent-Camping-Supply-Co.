@@ -691,18 +691,17 @@ object {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
-
-.site-main {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  background-image: url("../../images/logos/inhabitent-logo-full.svg");
-  background-size: 100%;
-  height: 15rem;
-  width: 15rem;
-  margin: 0 auto;
-  background-position: center center; }
+  .home .content-area .site-main {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    background-image: url("../../images/logos/inhabitent-logo-full.svg");
+    background-size: 100%;
+    height: 15rem;
+    width: 15rem;
+    margin: 0 auto;
+    background-position: center center; }
 
 .entry-header {
   display: none; }
@@ -745,6 +744,18 @@ object {
         -ms-flex-pack: center;
             justify-content: center;
         text-transform: uppercase; }
+
+/* Journal */
+.post {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  margin: 3rem; }
 
 /* Find Us */
 #post-27 {
