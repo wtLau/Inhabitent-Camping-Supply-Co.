@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Journal Page
+ * Template Name: Find-Us Page
  *
  * @package RED_Starter_Theme
  */
