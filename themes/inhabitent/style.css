@@ -418,15 +418,22 @@ textarea {
 
 /* Links */
 a {
-  color: royalblue; }
+  color: #fff;
+  text-decoration: none; }
   a:visited {
-    color: purple; }
+    color: #fff; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #f0e4d1; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
+  a :hover > a,
+  a .focus > a {
+    color: #f0e4d1; }
+  a a:hover,
+  a a.focus {
+    color: #f0e4d1; }
 
 /* Menus */
 .site-header {
@@ -746,7 +753,7 @@ object {
         text-transform: uppercase; }
 
 /* Journal */
-.post {
+.post, .has-post-thumbnail {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -755,7 +762,49 @@ object {
       align-items: center;
   -ms-flex-flow: row nowrap;
       flex-flow: row nowrap;
-  margin: 3rem; }
+  margin: 3rem;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  width: 640px; }
+  .post .entry-header, .has-post-thumbnail .entry-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    position: relative; }
+    .post .entry-header .entry-title, .has-post-thumbnail .entry-header .entry-title {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      background-color: #248A83;
+      padding: 0.75rem 1.5rem; }
+      .post .entry-header .entry-title a, .has-post-thumbnail .entry-header .entry-title a {
+        text-decoration: none;
+        color: #fff; }
+      .post .entry-header .entry-title a:hover, .has-post-thumbnail .entry-header .entry-title a:hover {
+        color: #f0e4d1; }
+  .post .entry-meta, .has-post-thumbnail .entry-meta {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #248A83;
+    padding: 0.25rem 1.5rem;
+    color: #fff;
+    text-transform: uppercase; }
 
 /* Find Us */
 .site-detail {

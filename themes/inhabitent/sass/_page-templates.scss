@@ -74,9 +74,40 @@
 }  
 /* Journal */
 
-.post {
+.post, .has-post-thumbnail {
   @include container-center;
   margin: $base__space-unit*2;
+  flex-flow: column nowrap;
+  width: 640px;
+  .entry-header {
+    @include container-center;
+    position: relative;
+    .entry-title {
+      @include container-center;
+      justify-content: initial;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      background-color: $color__background-post;
+      padding: $base__space-unit/2 $base__space-unit;
+      a {
+        text-decoration: none;
+        color: $color__background-body;
+      }  
+      a:hover {
+        color: $color-yellow;
+      }
+    }
+  }
+  .entry-meta {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $color__background-post;
+    padding: $base__space-unit/6 $base__space-unit;
+    color: $color__background-body;
+    text-transform: uppercase;
+  }
 }
 
 /* Find Us */

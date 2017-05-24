@@ -15,15 +15,16 @@
 /* Links */
 
 a {
-	color: $color__link;
+	color: $color__background-body;
+	text-decoration: none;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $color__background-body;
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $color-yellow;
 	}
 	&:focus {
 		outline: thin dotted;
@@ -31,6 +32,14 @@ a {
 	&:hover,
 	&:active {
 		outline: 0;
+	}
+	:hover > a,
+	.focus > a {
+		color: $color-yellow;
+	}
+	a:hover,
+	a.focus {
+		color: $color-yellow;
 	}
 }
 

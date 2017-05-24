@@ -21,14 +21,23 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
+
+          <!--Get products from shop-->
+
+          <!--Get post from journal -->
         <?php $args = array( 'post_type' => 'post', 'order' => 'ASC', 'posts_per_page' => 3 );
         $product_posts = get_posts( $args ); ?>
+        <ul>
         <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-          <?php the_title() ?>
-          <!--<?php red_starter_posted_on() ?>-->
-          <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
-          <?php red_starter_posted_by(); ?>
-          <?php the_excerpt(); ?>
+        <div class="thumbnail-wrapper">
+          <?php the_post_thumbnail( 'large' ); ?>
+        </div>
+        <div class="entry-meta">
+			    <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
+		    </div>
+        <div class="entry-content">
+	      	<?php the_excerpt(); ?>
+	      </div>
         <?php endforeach; wp_reset_postdata(); ?>
 
 			<?php endwhile; ?>
