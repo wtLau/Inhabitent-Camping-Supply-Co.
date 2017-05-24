@@ -2,7 +2,7 @@
 /**
  * Template Name: About Page.
  *
- * @package RED_Starter_Theme
+ * @package Inhabintent_Theme
  */
 
 get_header(); ?>

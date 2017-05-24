@@ -18,10 +18,18 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
+        <?php $args = array( 'post_type' => 'post', 'order' => 'ASC', 'posts_per_page' => 3 );
+        $product_posts = get_posts( $args ); ?>
+        <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+          <?php the_title() ?>
+          <!--<?php red_starter_posted_on() ?>-->
+          <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+          <?php red_starter_posted_by(); ?>
+          <?php the_excerpt(); ?>
+        <?php endforeach; wp_reset_postdata(); ?>
 
 			<?php endwhile; ?>
 

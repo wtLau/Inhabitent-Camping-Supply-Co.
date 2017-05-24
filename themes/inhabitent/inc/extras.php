@@ -67,3 +67,4 @@ function inhabitent_login_title( ) {
 	return 'Inhabitent Camping Supply Co.';
 }
 add_filter( 'login_headertitle', 'inhabitent_login_title' );
+

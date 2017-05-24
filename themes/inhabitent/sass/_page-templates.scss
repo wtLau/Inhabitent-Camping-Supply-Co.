@@ -81,34 +81,43 @@
 
 /* Find Us */
 
-#post-27 {
-  margin: $base__space-unit*2;
-  
-  .entry-header {
+.site-detail {
+  @include container-between;
+  .widget-area {
+    width: 25%;
+    height: 100%;
+    border-left: $color__background-pre solid 1px;
     display: flex;
-    // flex-flow: column wrap;
-    // justify-content: center;
-    // align-items: center;
-
-    .entry-title {
-      text-transform: uppercase;
-    }
+    flex-flow: column nowrap;
   }
-  .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  #post-27 {
+    margin: $base__space-unit*2;
+    .entry-header {
+      display: flex;
+      // flex-flow: column wrap;
+      // justify-content: center;
+      // align-items: center;
 
-    .entry-content {
-      width: $base__space-unit*26;
-
-      h2 {
-        display: flex;
+      .entry-title {
         text-transform: uppercase;
       }
     }
-  }
-}  
+    .container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .entry-content {
+        width: $base__space-unit*26;
+
+        h2 {
+          display: flex;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }  
+} 
 
 
 /* Footer */
@@ -178,33 +187,3 @@
     }
   }
 }
-
-// .widget-area {
-// 	background-image: url('../../images/dark-wood.png');
-// 	background-size: contain;
-// 	background-repeat: repeat;
-//   display: flex;
-//   flex-flow: row nowrap;
-// 	padding: $base__space-unit;
-// 	h2 {
-// 		text-transform: uppercase;
-// 		color:$color__widget-header;
-//     @include font-size;
-// 	}
-// 	#text-4 {
-// 		background-image: url('../../images/logos/inhabitent-logo-text.svg');
-// 		background-repeat: no-repeat;
-// 		background-size: 14rem 7rem;
-// 		background-position: top right;
-// 		width: 50%;
-// 	}
-//   .widget_text {
-//     display: flex; 
-//     flex-flow: column nowrap;
-// 		color: $color__background-body;
-    
-//     .textwidget {
-//       display: flex;
-//       flex-flow: column nowrap;
-//       p {
-//         margin: .5rem;

@@ -2,13 +2,13 @@
 /**
  * Template Name: Find-Us Page
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent_Theme
  */
 
 get_header(); ?>
 
-
-<div class ="post">
+<div class="site-detail">
+	<div class ="post">
   		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
@@ -31,11 +31,13 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
-</div>
+	</div>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>
+
 
