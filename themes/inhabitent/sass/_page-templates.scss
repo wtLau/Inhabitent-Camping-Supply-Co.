@@ -75,10 +75,12 @@
 /* Journal */
 
 .post, .has-post-thumbnail {
-  @include container-center;
   margin: $base__space-unit*2;
+  display: flex;
   flex-flow: column nowrap;
+  align-items: flex-start;
   width: 640px;
+
   .entry-header {
     @include container-center;
     position: relative;
@@ -98,15 +100,30 @@
         color: $color-yellow;
       }
     }
+    .entry-meta {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $color__background-post;
+      padding: $base__space-unit/6 $base__space-unit;
+      color: $color__background-body;
+      text-transform: uppercase;
+    }
   }
-  .entry-meta {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: $color__background-post;
-    padding: $base__space-unit/6 $base__space-unit;
-    color: $color__background-body;
-    text-transform: uppercase;
+  .entry-content {
+    margin: 0 0;
+    p {
+      margin: 0 0;
+      margin-top: $base__space-unit/2;
+    }
+  }
+  .read-more a {
+    color: $color__text-main;
+    p {
+      padding: $base__space-unit/4 $base__space-unit/2;
+      border: $base__space-unit solid 1px;
+      margin: none;
+    }
   }
 }
 

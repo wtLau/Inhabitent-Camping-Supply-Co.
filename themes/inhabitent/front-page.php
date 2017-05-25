@@ -23,31 +23,46 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content' ); ?>
 
           <!--Get products from shop-->
-        <?php $product_types = get_term(array( 'taxonomy' => 'product-type', 'hide_empty' => 0)); 
+          
+        <?php $product_types = get_terms(
+          array( 
+            'taxonomy' => 'product-type',
+            'hide_empty' => 0
+          )); 
           if ( !empty($product_types) && !is_wp_error($product_types)) : ?>
-        <!--put mark up here-->
-          <?php foreach ( $product_types as $product_type): ?>
-            <a href="<?php echo get_term_link($product_type); ?>">
-              <h3><?php echo $product_type->name;?>Shop Stuff </h3>
-            </a>
+
+          <?php foreach ( $product_types as $product_type ) : ?>
+
+          <a href="<?php echo get_term_link($product_type); ?>">
+            <h3><?php echo $product_type->name;?>Shop Stuff </h3>
+          </a>
+
           <?php endforeach; ?>
+
         <?php endif; ?>
 
           <!--Get post from journal -->
-        <?php $args = array( 'post_type' => 'post', 'order' => 'ASC', 'posts_per_page' => 3 );
-        $product_posts = get_posts( $args ); ?>
-        <ul>
-        <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-          <div class="thumbnail-wrapper">
-            <?php the_post_thumbnail( 'large' ); ?>
-          </div>
-          <div class="entry-meta">
-			     <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
-		      </div>
-          <div class="entry-content">
-            <?php the_excerpt(); ?>
-          </div>
-        <?php endforeach; wp_reset_postdata(); ?>
+        <?php $args = array( 
+          'post_type' => 'post', 
+          'order' => 'ASC', 
+          'posts_per_page' => 3 
+        );
+          $product_posts = get_posts( $args ); ?>
+          <ul>
+            <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+              <div class="thumbnail-wrapper">
+                <?php the_post_thumbnail( 'large' ); ?>
+              </div>
+              <div class="entry-meta">
+                <?php red_starter_posted_on(); ?> /
+                <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / 
+                <?php red_starter_posted_by(); ?>
+              </div>
+              <div class="entry-content">
+                <?php the_excerpt(); ?>
+              </div>
+            </ul>
+          <?php endforeach; wp_reset_postdata(); ?>
 
 			<?php endwhile; ?>
 

@@ -1,7 +1,7 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: Inhabitent Theme
 Theme URI: http://underscores.me/
-Author: RED Academy
+Author: Brian Lau
 Author URI: http://www.redacademy.com
 Description: A WordPress starter theme for RED Academy students.
 Version: 1.0.0
@@ -230,7 +230,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: black;
   font-family: Merriwather, sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -754,17 +754,13 @@ object {
 
 /* Journal */
 .post, .has-post-thumbnail {
+  margin: 3rem;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
-  margin: 3rem;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
+  -ms-flex-align: start;
+      align-items: flex-start;
   width: 640px; }
   .post .entry-header, .has-post-thumbnail .entry-header {
     display: -ms-flexbox;
@@ -797,14 +793,25 @@ object {
         color: #fff; }
       .post .entry-header .entry-title a:hover, .has-post-thumbnail .entry-header .entry-title a:hover {
         color: #f0e4d1; }
-  .post .entry-meta, .has-post-thumbnail .entry-meta {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #248A83;
-    padding: 0.25rem 1.5rem;
-    color: #fff;
-    text-transform: uppercase; }
+    .post .entry-header .entry-meta, .has-post-thumbnail .entry-header .entry-meta {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #248A83;
+      padding: 0.25rem 1.5rem;
+      color: #fff;
+      text-transform: uppercase; }
+  .post .entry-content, .has-post-thumbnail .entry-content {
+    margin: 0 0; }
+    .post .entry-content p, .has-post-thumbnail .entry-content p {
+      margin: 0 0;
+      margin-top: 0.75rem; }
+  .post .read-more a, .has-post-thumbnail .read-more a {
+    color: black; }
+    .post .read-more a p, .has-post-thumbnail .read-more a p {
+      padding: 0.375rem 0.75rem;
+      border: 1.5rem solid 1px;
+      margin: none; }
 
 /* Find Us */
 .site-detail {
