@@ -23,23 +23,32 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content' ); ?>
 
           <!--Get products from shop-->
-          
-        <?php $product_types = get_terms(
-          array( 
-            'taxonomy' => 'product-type',
-            'hide_empty' => 0
-          )); 
-          if ( !empty($product_types) && !is_wp_error($product_types)) : ?>
+        <section class="product-section">
+          <?php $product_types = get_terms(
+            array( 
+              'taxonomy' => 'product-type',
+              'hide_empty' => 0,
 
-          <?php foreach ( $product_types as $product_type ) : ?>
+            )); 
+            if ( !empty($product_types) && !is_wp_error($product_types)) : ?>
 
-          <a href="<?php echo get_term_link($product_type); ?>">
-            <h3><?php echo $product_type->name;?>Shop Stuff </h3>
-          </a>
+            <?php foreach ( $product_types as $product_type ) : ?>
+            
+            <article class="products-display">
+              <p>
+                <?php echo $product_type->description;?>
+              </p>
+              <a href="<?php echo get_term_link($product_type); ?>">
+                <h3>
+                  <?php echo $product_type->name;?> Stuff
+                </h3>
+              </a>
+            </article>
 
-          <?php endforeach; ?>
+            <?php endforeach; ?>
 
-        <?php endif; ?>
+          <?php endif; ?>
+        </section>
 
           <!--Get post from journal -->
         <?php $args = array( 
