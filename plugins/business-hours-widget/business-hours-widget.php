@@ -6,19 +6,19 @@
  *
  * Lightly forked from the WordPress Widget Boilerplate by @tommcfarlin.
  *
- * @package   Widget_Name
- * @author    Your Name <email@example.com>
+ * @package   Business_Hours_Widget
+ * @author    Brian Lau <lauwangtatbrian@gmail.com>
  * @license   GPL-2.0+
- * @link      http://example.com
- * @copyright 2015 Your Name or Company Name
+ * @link      http://inhabitent.com
+ * @copyright 2017 Brian Lau
  *
  * @wordpress-plugin
- * Plugin Name:       @TODO
+ * Plugin Name:       Inhabitent Business Hours Widget
  * Plugin URI:        @TODO
- * Description:       @TODO
+ * Description:       A handy business hours widget for Inhabitent Camping Co.
  * Version:           1.0.0
- * Author:            @TODO
- * Author URI:        @TODO
+ * Author:            Brian Lau
+ * Author URI:        https://github.com/wtLau
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
