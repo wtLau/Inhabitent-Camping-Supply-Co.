@@ -68,3 +68,16 @@ function inhabitent_login_title( ) {
 }
 add_filter( 'login_headertitle', 'inhabitent_login_title' );
 
+/**
+ * Changing the number of posts per page
+ */
+
+function hwl_home_pagesize( $query ) {
+    if ( is_post_type_archive( 'product' ) && !is_admin() && $query->is_main_query() ) {
+        // Display 50 posts for a custom post type called 'movie'
+        $query->set( 'posts_per_page', 16);
+				$query->set( 'orderby', 'title' );
+				$query->set ( 'order', 'ASC' );
+    }
+}
+add_action( 'pre_get_posts', 'hwl_home_pagesize', 1 );
