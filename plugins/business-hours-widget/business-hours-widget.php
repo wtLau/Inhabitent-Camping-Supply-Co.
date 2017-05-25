@@ -28,8 +28,7 @@ if ( ! defined ( 'ABSPATH' ) ) {
 	exit;
 }
 
-// TODO: change 'Widget_Name' to the name of your plugin
-class Widget_Name extends WP_Widget {
+class business_hours_widget extends WP_Widget {
 
     /**
      * @TODO - Rename "widget-name" to the name your your widget
@@ -40,7 +39,7 @@ class Widget_Name extends WP_Widget {
      *
      * @var      string
      */
-    protected $widget_slug = 'widget-name';
+    protected $widget_slug = 'business_hour';
 
 	/*--------------------------------------------------*/
 	/* Constructor
@@ -54,10 +53,10 @@ class Widget_Name extends WP_Widget {
 		// TODO: update description
 		parent::__construct(
 			$this->get_widget_slug(),
-			'Widget Name',
+			'Inhabitent Business Hour',
 			array(
 				'classname'  => $this->get_widget_slug().'-class',
-				'description' => 'Short description of the widget goes here.'
+				'description' => 'Add the store\'s business hours.'
 			)
 		);
 
@@ -140,15 +139,21 @@ class Widget_Name extends WP_Widget {
 	 */
 	public function form( $instance ) {
 
-		// TODO: Define default values for your variables, create empty value if no default
 		$instance = wp_parse_args(
 			(array) $instance,
 			array(
-				'title' => 'My Widget Title',
+				'title' => 'Business Hour',
+				'monday_friday' => '',
+				'saturday' => '',
+				'sunday' => ''
 			)
 		);
 
 		$title = strip_tags( $instance['title'] );
+		$monday_friday = strip_tags( $instance['monday_friday'] );
+		$saturday = strip_tags( $instance['saturday'] );
+		$sunday = strip_tags( $instance['sunday'] );
+		
 		// TODO: Store the rest of values of the widget in their own variables
 
 		// Display the admin form
@@ -158,7 +163,7 @@ class Widget_Name extends WP_Widget {
 
 } // end class
 
-// TODO: Remember to change 'Widget_Name' to match the class name definition
+
 add_action( 'widgets_init', function(){
-     register_widget( 'Widget_Name' );
+     register_widget( 'business_hours_widget' );
 });
