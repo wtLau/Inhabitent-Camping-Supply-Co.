@@ -28,7 +28,7 @@ get_header(); ?>
         <!--put mark up here-->
           <?php foreach ( $product_types as $product_type): ?>
             <a href="<?php echo get_term_link($product_type); ?>">
-              <h3><?php echo $product_type->name;?> Stuff </h3>
+              <h3><?php echo $product_type->name;?>Shop Stuff </h3>
             </a>
           <?php endforeach; ?>
         <?php endif; ?>
