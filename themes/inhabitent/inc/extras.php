@@ -81,3 +81,13 @@ function inhabitent_modify_archive_queries( $query ) {
 		}
 }
 add_action( 'pre_get_posts', 'inhabitent_modify_archive_queries' );
+
+function inhabitent_archive_title_filter ($title) {
+	if(is_post_type_archive('product')) {
+		$title= post_type_archive_title( '', false );
+	} elseif (is_tax('product-type')) {
+		$title= single_term_title( '', false );
+	} 
+	return $title;
+}
+add_filter('get_the_archive_title', 'inhabitent_archive_title_filter');

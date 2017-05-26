@@ -763,42 +763,6 @@ object {
       .product-section .product-area .products-display a {
         background: #248A83; }
 
-/* About page */
-.page {
-  margin: 0; }
-  .page .entry-header {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: column wrap;
-        flex-flow: column wrap;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/about-hero.jpg") no-repeat;
-    background-size: cover, cover;
-    background-position: center bottom;
-    height: 100vh; }
-    .page .entry-header .entry-title {
-      color: #fff;
-      text-transform: uppercase; }
-  .page .container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center; }
-    .page .container .entry-content {
-      margin: 3rem 10.5rem;
-      width: 39rem; }
-      .page .container .entry-content h2 {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: center;
-            justify-content: center;
-        text-transform: uppercase; }
-
 /* Journal */
 .post {
   margin: 3rem;
@@ -859,6 +823,42 @@ object {
       padding: 0.375rem 0.75rem;
       border: 1.5rem solid 1px;
       margin: none; }
+
+/* About page */
+.page {
+  margin: 0; }
+  .page .entry-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/about-hero.jpg") no-repeat;
+    background-size: cover, cover;
+    background-position: center bottom;
+    height: 100vh; }
+    .page .entry-header .entry-title {
+      color: #fff;
+      text-transform: uppercase; }
+  .page .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    .page .container .entry-content {
+      margin: 3rem 10.5rem;
+      width: 39rem; }
+      .page .container .entry-content h2 {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        text-transform: uppercase; }
 
 /* Find Us */
 .site-detail {

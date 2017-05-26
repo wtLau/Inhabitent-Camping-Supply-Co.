@@ -69,44 +69,6 @@
     }
   }
 }
-
-/* About page */
-
-.page {
-  margin: 0;
-  
-  .entry-header {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(0,0,0, .4),rgba(0,0,0, .4)), url('../../images/about-hero.jpg') no-repeat;
-    background-size: cover, cover;
-    background-position: center bottom;
-    height: 100vh;
-
-    .entry-title {
-      color: #fff;
-      text-transform: uppercase;
-    }
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .entry-content {
-      margin: $base__space-unit*2 $base__space-unit*7;
-      width: $base__space-unit*26;
-
-      h2 {
-        display: flex;
-        justify-content: center;
-        text-transform: uppercase;
-      }
-    }
-  }
-}  
 /* Journal */
 
 .post {
@@ -161,6 +123,44 @@
     }
   }
 }
+
+/* About page */
+
+.page {
+  margin: 0;
+  
+  .entry-header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0, .4),rgba(0,0,0, .4)), url('../../images/about-hero.jpg') no-repeat;
+    background-size: cover, cover;
+    background-position: center bottom;
+    height: 100vh;
+
+    .entry-title {
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .entry-content {
+      margin: $base__space-unit*2 $base__space-unit*7;
+      width: $base__space-unit*26;
+
+      h2 {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+}  
 
 /* Find Us */
 .site-detail {
