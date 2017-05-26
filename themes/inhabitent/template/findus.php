@@ -8,7 +8,7 @@
 get_header(); ?>
 
 <div class="site-detail">
-	<div class ="post">
+	<div class ="post-findus">
   		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>

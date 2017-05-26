@@ -24,30 +24,33 @@ get_header(); ?>
 
           <!--Get products from shop-->
         <section class="product-section">
-          <?php $product_types = get_terms(
-            array( 
-              'taxonomy' => 'product-type',
-              'hide_empty' => 0,
+          <div class="product-area">
+            <?php $product_types = get_terms(
+              array( 
+                'taxonomy' => 'product-type',
+                'hide_empty' => 0,
 
-            )); 
-            if ( !empty($product_types) && !is_wp_error($product_types)) : ?>
+              )); 
+              if ( !empty($product_types) && !is_wp_error($product_types)) : ?>
 
-            <?php foreach ( $product_types as $product_type ) : ?>
-            
-            <article class="products-display">
-              <p>
-                <?php echo $product_type->description;?>
-              </p>
-              <a href="<?php echo get_term_link($product_type); ?>">
-                <h3>
-                  <?php echo $product_type->name;?> Stuff
-                </h3>
-              </a>
-            </article>
+              <?php foreach ( $product_types as $product_type ) : ?>
+              
+              <article class="products-display">
+                <img class="product-type-icon" id="<?php echo uniqid(1) ?>"> 
+                <p>
+                  <?php echo $product_type->description;?>
+                </p>
+                <a href="<?php echo get_term_link($product_type); ?>">
+                  <h3>
+                    <?php echo $product_type->name;?> Stuff
+                  </h3>
+                </a>
+              </article>
 
-            <?php endforeach; ?>
+              <?php endforeach; ?>
 
-          <?php endif; ?>
+            <?php endif; ?>
+          </div> 
         </section>
 
           <!--Get post from journal -->

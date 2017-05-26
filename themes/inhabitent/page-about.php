@@ -8,7 +8,7 @@
 get_header(); ?>
 
 
-<div class ="post">
+<div class ="page-about">
   		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>

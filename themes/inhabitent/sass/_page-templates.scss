@@ -8,7 +8,7 @@
  */
 
 
- .home .content-area {
+.post-38 {
 	background-image: linear-gradient(rgba(0,0,0, .4), rgba(0,0,0, .4)), url('../../images/home-hero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
   display: flex; 
   justify-content: center;
   align-items: center;
-  .site-main {
+  .entry-header {
     display: flex;
     justify-content: center;
     background-image: url('../../images/logos/inhabitent-logo-full.svg');
@@ -25,6 +25,9 @@
     width: 15rem;
     margin: 0 auto;
     background-position: center center;
+    h2 {
+      display: none;
+    }
   }
  }
 
@@ -35,9 +38,41 @@
   display: none;
 }
 
+.product-section {
+  @include container-center; 
+  height: 20rem;
+  article:nth-last-child(4){
+    background: black;
+    margin-left: 0;
+  }
+  .product-area {
+    @include container-center;
+    width: 1120px;
+    justify-content: space-between;
+    .products-display {
+      @include container-center;
+      margin-left: $base__space-unit/2;
+      flex-flow: column nowrap;
+      border: $color-grey-light solid 1px;
+      height: 15rem;
+      margin: 
+      img {
+        height: 4rem;
+        width: 4rem;
+      }
+      p {
+
+      }
+      a {
+        background: $color__background-post;
+      }
+    }
+  }
+}
+
 /* About page */
 
-#post-23 {
+.page {
   margin: 0;
   
   .entry-header {
@@ -74,7 +109,7 @@
 }  
 /* Journal */
 
-.post, .has-post-thumbnail {
+.post {
   margin: $base__space-unit*2;
   display: flex;
   flex-flow: column nowrap;
@@ -128,44 +163,41 @@
 }
 
 /* Find Us */
-
 .site-detail {
-  @include container-between;
-  .widget-area {
-    width: 25%;
-    height: 100%;
-    border-left: $color__background-pre solid 1px;
+  display: flex;
+  justify-content: space-around;
+  .post-findus {
     display: flex;
-    flex-flow: column nowrap;
-  }
-  #post-27 {
-    margin: $base__space-unit*2;
-    .entry-header {
+    justify-content: flex-start;
+    align-items: flex-start;
+    .post-27 {
       display: flex;
-      // flex-flow: column wrap;
-      // justify-content: center;
-      // align-items: center;
-
-      .entry-title {
-        text-transform: uppercase;
-      }
-    }
-    .container {
-      display: flex;
+      flex-flow: column nowrap;
       justify-content: flex-start;
-      align-items: center;
-
-      .entry-content {
-        width: $base__space-unit*26;
-
-        h2 {
-          display: flex;
+      align-items: flex-start;
+      .entry-header {
+        background-image: none;
+        height: initial;
+        .entry-title {
           text-transform: uppercase;
+          color: black;
         }
       }
-    }
+      .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .entry-content {
+          margin: 0;
+          h2 {
+            display: initial;
+            text-transform: uppercase;            
+          }
+        }
+      }
+    }    
   }  
-} 
+}
 
 
 /* Footer */
