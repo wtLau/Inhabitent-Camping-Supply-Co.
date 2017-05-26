@@ -81,6 +81,10 @@ function inhabitent_modify_archive_queries( $query ) {
 		}
 }
 add_action( 'pre_get_posts', 'inhabitent_modify_archive_queries' );
+ 
+/**
+ *Archive Title Filter
+ */
 
 function inhabitent_archive_title_filter ($title) {
 	if(is_post_type_archive('product')) {
@@ -91,3 +95,22 @@ function inhabitent_archive_title_filter ($title) {
 	return $title;
 }
 add_filter('get_the_archive_title', 'inhabitent_archive_title_filter');
+
+/**
+ * Changing the number of posts per page
+ */
+function about_background() {
+ wp_enqueue_style(
+	'custom-style',
+	get_template_directory_uri() . 'build/css/style.min.css'
+	);
+	$background = CFS()->get( 'background_image' ); 
+	$custom_css = "
+		.about-title{
+			background: url({$background}), linear-gradient(rgba(0,0,0, .4),rgba(0,0,0, .4)), no-repeat;
+		background-size: cover, cover;
+    background-position: center bottom;
+		}";
+	wp_add_inline_style( 'custom-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'about_background' );

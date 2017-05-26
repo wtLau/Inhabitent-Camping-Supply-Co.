@@ -903,7 +903,7 @@ object {
 /* About page */
 .post-23 {
   margin: 0; }
-  .post-23 .entry-header {
+  .post-23 .about-title {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: column wrap;
@@ -912,11 +912,8 @@ object {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/about-hero.jpg") no-repeat;
-    background-size: cover, cover;
-    background-position: center bottom;
     height: 100vh; }
-    .post-23 .entry-header .entry-title {
+    .post-23 .about-title .entry-title {
       color: #fff;
       text-transform: uppercase; }
   .post-23 .container {

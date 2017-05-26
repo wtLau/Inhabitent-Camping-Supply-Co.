@@ -202,14 +202,11 @@
 
 .post-23 {
   margin: 0;  
-  .entry-header {
+  .about-title {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0,0,0, .4),rgba(0,0,0, .4)), url('../../images/about-hero.jpg') no-repeat;
-    background-size: cover, cover;
-    background-position: center bottom;
     height: 100vh;
     .entry-title {
       color: #fff;
