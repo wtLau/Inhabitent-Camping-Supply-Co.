@@ -727,10 +727,11 @@ object {
       align-items: center;
   -ms-flex-flow: row nowrap;
       flex-flow: row nowrap;
-  height: 20rem; }
-  .product-section article:nth-last-child(4) {
-    background: black;
-    margin-left: 0; }
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  padding: 0 1.5rem; }
+  .product-section h1 {
+    text-transform: uppercase; }
   .product-section .product-area {
     display: -ms-flexbox;
     display: flex;
@@ -756,12 +757,87 @@ object {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
       border: #a1a1a1 solid 1px;
-      height: 15rem;
-      margin: img;
-        margin-height: 4rem;
-        margin-width: 4rem; }
+      height: 18rem;
+      width: 17rem;
+      padding: 0.75rem; }
+      .product-section .product-area .products-display img {
+        height: 4rem;
+        width: 4rem; }
+      .product-section .product-area .products-display p {
+        text-align: center; }
       .product-section .product-area .products-display a {
-        background: #248A83; }
+        background: #248A83;
+        padding: 0 1.5rem; }
+        .product-section .product-area .products-display a p {
+          margin: 0.75rem;
+          text-transform: uppercase; }
+  .product-section article:nth-last-child(4) {
+    margin-left: 0 !important; }
+
+.journal-section {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  margin: 1.5rem 0; }
+  .journal-section h1 {
+    text-transform: uppercase; }
+  .journal-section .front-page-journal {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 1120px; }
+    .journal-section .front-page-journal .front-single {
+      width: 22rem; }
+      .journal-section .front-page-journal .front-single .thumbnail-wrapper img {
+        height: 15rem; }
+      .journal-section .front-page-journal .front-single .post-info-wrapper {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-line-pack: justify;
+            align-content: space-between;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+        height: 11rem;
+        padding: 0.75rem 0.375rem;
+        border: 1px solid #e1e1e1;
+        border-top: 5px solid #e1e1e1; }
+        .journal-section .front-page-journal .front-single .post-info-wrapper p {
+          margin: 0;
+          padding: 0; }
+        .journal-section .front-page-journal .front-single .post-info-wrapper .entry-meta p {
+          color: #808080; }
+        .journal-section .front-page-journal .front-single .post-info-wrapper .entry-content, .journal-section .front-page-journal .front-single .post-info-wrapper h3 {
+          margin: 0;
+          padding: 0;
+          text-transform: uppercase; }
+          .journal-section .front-page-journal .front-single .post-info-wrapper .entry-content a, .journal-section .front-page-journal .front-single .post-info-wrapper h3 a {
+            color: #248A83; }
+          .journal-section .front-page-journal .front-single .post-info-wrapper .entry-content a:hover, .journal-section .front-page-journal .front-single .post-info-wrapper h3 a:hover {
+            color: #2f1339; }
+        .journal-section .front-page-journal .front-single .post-info-wrapper .read-more {
+          bottom: 0; }
+          .journal-section .front-page-journal .front-single .post-info-wrapper .read-more a {
+            color: black; }
+            .journal-section .front-page-journal .front-single .post-info-wrapper .read-more a p {
+              padding: 0.375rem 0.75rem;
+              border: 1.5rem solid 1px;
+              margin: none; }
+          .journal-section .front-page-journal .front-single .post-info-wrapper .read-more:hover {
+            background: #248A83; }
+            .journal-section .front-page-journal .front-single .post-info-wrapper .read-more:hover p {
+              color: #fff; }
 
 /* Journal */
 .post {
@@ -825,9 +901,9 @@ object {
       margin: none; }
 
 /* About page */
-.page {
+.post-23 {
   margin: 0; }
-  .page .entry-header {
+  .post-23 .entry-header {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: column wrap;
@@ -840,20 +916,20 @@ object {
     background-size: cover, cover;
     background-position: center bottom;
     height: 100vh; }
-    .page .entry-header .entry-title {
+    .post-23 .entry-header .entry-title {
       color: #fff;
       text-transform: uppercase; }
-  .page .container {
+  .post-23 .container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
         align-items: center; }
-    .page .container .entry-content {
+    .post-23 .container .entry-content {
       margin: 3rem 10.5rem;
       width: 39rem; }
-      .page .container .entry-content h2 {
+      .post-23 .container .entry-content h2 {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: center;
@@ -865,8 +941,10 @@ object {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around; }
+      justify-content: space-around;
+  padding-top: 1.5rem; }
   .site-detail .post-findus {
+    margin-left: 4.5rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: start;
@@ -884,7 +962,8 @@ object {
           align-items: flex-start; }
       .site-detail .post-findus .post-27 .entry-header {
         background-image: none;
-        height: initial; }
+        height: initial;
+        display: initial; }
         .site-detail .post-findus .post-27 .entry-header .entry-title {
           text-transform: uppercase;
           color: black; }
@@ -923,9 +1002,8 @@ object {
     display: flex;
     -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
-    width: 100%;
-    margin: 1.5rem 4.5rem 0.3rem 4.5rem;
-    padding: 0 4.5rem; }
+    width: 1120px;
+    margin: 1.5rem 0 0.3rem 0; }
     .site-footer .footer-container .footer-logo {
       width: 25%;
       background: url("../../images/logos/inhabitent-logo-text.svg") no-repeat;

@@ -40,10 +40,10 @@
 
 .product-section {
   @include container-center; 
-  height: 20rem;
-  article:nth-last-child(4){
-    background: black;
-    margin-left: 0;
+  flex-flow: column nowrap;
+  padding: 0 $base__space-unit;
+  h1 {
+    text-transform: uppercase;
   }
   .product-area {
     @include container-center;
@@ -54,21 +54,95 @@
       margin-left: $base__space-unit/2;
       flex-flow: column nowrap;
       border: $color-grey-light solid 1px;
-      height: 15rem;
-      margin: 
+      height: 18rem;
+      width: 17rem;
+      padding: $base__space-unit/2;
       img {
         height: 4rem;
         width: 4rem;
       }
       p {
-
+        text-align: center;
       }
       a {
         background: $color__background-post;
+        padding: 0 $base__space-unit;
+        p {
+          margin: $base__space-unit/2;
+          text-transform: uppercase;
+        }
       }
     }
   }
+  article:nth-last-child(4){
+    margin-left: 0 !important;
+  }  
 }
+.journal-section { 
+  @include container-center;
+  flex-flow: column nowrap;
+  margin: $base__space-unit 0;
+  h1 {
+    text-transform: uppercase;
+  }
+  .front-page-journal {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 1120px;
+    .front-single {
+      width: 22rem;
+      .thumbnail-wrapper {
+        img {
+          height: 15rem;
+        }
+      }
+      .post-info-wrapper {
+        @include display-column;
+        height: 11rem;
+        padding: $base__space-unit/2 $base__space-unit/4;
+        border: 1px solid #e1e1e1;
+        border-top: 5px solid #e1e1e1;
+        p {
+          margin: 0;
+          padding: 0;
+        }
+        .entry-meta p {
+          color: $color-grey-medium;
+        }
+        .entry-content, h3 {
+          margin: 0;
+          padding: 0;
+          text-transform: uppercase;
+          a {
+            color: $color__background-post;
+          }
+          a:hover {
+            color: $color-purple;
+          }
+        }
+        .read-more {
+          bottom: 0;
+          a {
+            color: $color__text-main;
+            p {
+              padding: $base__space-unit/4 $base__space-unit/2;
+              border: $base__space-unit solid 1px;
+              margin: none;
+            }
+          }
+          &:hover {
+            background: $color__background-post;
+            p {
+              color: $color__background-body;
+            }
+          }
+        }
+      }  
+    }
+  }
+}  
 /* Journal */
 
 .post {
@@ -126,9 +200,8 @@
 
 /* About page */
 
-.page {
-  margin: 0;
-  
+.post-23 {
+  margin: 0;  
   .entry-header {
     display: flex;
     flex-flow: column wrap;
@@ -138,7 +211,6 @@
     background-size: cover, cover;
     background-position: center bottom;
     height: 100vh;
-
     .entry-title {
       color: #fff;
       text-transform: uppercase;
@@ -148,11 +220,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     .entry-content {
       margin: $base__space-unit*2 $base__space-unit*7;
       width: $base__space-unit*26;
-
       h2 {
         display: flex;
         justify-content: center;
@@ -166,7 +236,9 @@
 .site-detail {
   display: flex;
   justify-content: space-around;
+  padding-top: $margin-page-top;
   .post-findus {
+    margin-left: 4.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -178,6 +250,7 @@
       .entry-header {
         background-image: none;
         height: initial;
+        display: initial;
         .entry-title {
           text-transform: uppercase;
           color: black;
@@ -218,10 +291,8 @@
   .footer-container {
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
-    margin: $base__space-unit $base__space-unit*3 $base__space-unit/5 $base__space-unit*3;
-    padding: 0 $base__space-unit*3;
-    
+    width: 1120px;
+    margin: $base__space-unit 0 $base__space-unit/5 0;
     .footer-logo {
       width: 25%;
       background:url('../../images/logos/inhabitent-logo-text.svg') no-repeat;
@@ -229,12 +300,10 @@
       background-position: top right;
       padding-bottom: 4rem;
     }
-
     .footer-area {
       display: flex;
       flex-flow: row nowrap;
       width: 75%;
-
       .footer-block {
         display: flex;
         flex-flow: column nowrap;

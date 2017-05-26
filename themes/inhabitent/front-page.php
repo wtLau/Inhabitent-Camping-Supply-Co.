@@ -24,6 +24,7 @@ get_header(); ?>
 
           <!--Get products from shop-->
         <section class="product-section">
+          <h1>Shop Stuff</h1>
           <div class="product-area">
             <?php $product_types = get_terms(
               array( 
@@ -36,14 +37,14 @@ get_header(); ?>
               <?php foreach ( $product_types as $product_type ) : ?>
               
               <article class="products-display">
-                <img class="product-type-icon" id="<?php echo uniqid(1) ?>"> 
+                <!--<img class="product-type-icon" id="<?php echo uniqid(1) ?>"> -->
                 <p>
                   <?php echo $product_type->description;?>
                 </p>
                 <a href="<?php echo get_term_link($product_type); ?>">
-                  <h3>
+                  <p>
                     <?php echo $product_type->name;?> Stuff
-                  </h3>
+                  </p>
                 </a>
               </article>
 
@@ -60,21 +61,38 @@ get_header(); ?>
           'posts_per_page' => 3 
         );
           $product_posts = get_posts( $args ); ?>
-          <ul>
-            <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-              <div class="thumbnail-wrapper">
-                <?php the_post_thumbnail( 'large' ); ?>
-              </div>
-              <div class="entry-meta">
-                <?php red_starter_posted_on(); ?> /
-                <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / 
-                <?php red_starter_posted_by(); ?>
-              </div>
-              <div class="entry-content">
-                <?php the_excerpt(); ?>
-              </div>
+          <section class="journal-section">
+            <h1>Inhabitent Journal</h1>
+            <ul class="front-page-journal">
+              <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+              <div class="front-single">
+                  <div class="thumbnail-wrapper">
+                    <?php the_post_thumbnail(); ?>
+                  </div>
+                  <div class="post-info-wrapper">
+                    <div class"post-meta-wrap">
+                      <div class="entry-meta">
+                        <p class ="journal-meta">
+                          <?php red_starter_posted_on(); ?> /
+                          <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+                        </p>
+                      </div>
+                      <div class="entry-content">
+                        <a href="<?php echo sprintf( esc_url( get_permalink() ) )?>">
+                          <h3><?php the_title(); ?></h3>
+                        </a>
+                      </div>
+                    </div>  
+                    <div class="read-more">
+                      <a href="<?php echo sprintf( esc_url( get_permalink() ) )?>">
+                        <p>Read Entry</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>  
+              <?php endforeach; wp_reset_postdata(); ?>
             </ul>
-          <?php endforeach; wp_reset_postdata(); ?>
+          </section>  
 
 			<?php endwhile; ?>
 
