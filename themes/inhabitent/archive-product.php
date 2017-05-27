@@ -48,7 +48,7 @@ get_header(); ?>
 									<?php endif; ?>
 									<div class="entry-title">
 										<p><?php the_title(); ?></p>
-										<p><?php echo CFS()->get( 'price' ); ?></p>
+										<p>$<?php echo CFS()->get( 'price' ); ?></p>
 									</div>
 								</header><!-- .entry-header -->
 

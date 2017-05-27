@@ -9,24 +9,43 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<section class="single-product-main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<header class="entry-header">
+							<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail( 'large' ); ?>
+							<?php endif; ?>
 
-			<h1><?php echo CFS()->get( 'price' ); ?></h1>
+						</header><!-- .entry-header -->
 
-			<?php the_post_navigation(); ?>
+						<div class="entry-content">
+ 							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+							<h4>$<?php echo CFS()->get( 'price' ); ?></h4> 
+							<?php the_content(); ?>
+							<?php
+								wp_link_pages( array(
+									'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+									'after'  => '</div>',
+								) );
+							?>
+						</div><!-- .entry-content -->
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+						<footer class="entry-footer">
+							<?php red_starter_entry_footer(); ?>
+						</footer><!-- .entry-footer -->
+					</article><!-- #post-## -->
 
-		<?php endwhile; // End of the loop. ?>
+					<?php
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
+					?>
 
+				<?php endwhile; // End of the loop. ?>
+			</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
