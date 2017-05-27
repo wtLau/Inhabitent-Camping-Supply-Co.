@@ -2,12 +2,23 @@
 # Widgets
 --------------------------------------------------------------*/
 
-.widget {
+.widget-area {
 	margin: $base__space-unit;
-
-	/* Make sure select elements fit in widgets. */
-	select {
-		max-width: 100%;
+	margin-top: $base__space-unit*3;
+	h2 {
+		text-transform: uppercase;
+	}
+	.day-of-week {
+		font-weight: bold;
+	}
+	ul {
+		margin: 0;
+		a {
+			color: $color__background-post;
+		}
+		a:hover {
+			color: $color-purple;
+		}
 	}
 }
 

@@ -1,8 +1,9 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
-
+.site-detail {
+  width: $body-width;
+}
 /*
  * Hero Banner
  */
@@ -155,7 +156,6 @@
   justify-content: center;
   align-items: center;
   .product-sections {
-    width: $body-width;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -191,13 +191,13 @@
       width: $body-width;      
       .product {
         @include container-center;
+        width: 23.5%;
         .entry-header {
           display: flex;
           flex-flow: column wrap;
           @include solid-border;
           img {
             height: 15rem;
-            width: 15rem;
           }  
           .entry-title {
             display: flex;
@@ -283,7 +283,6 @@
   flex-flow: column nowrap;
   align-items: flex-start;
   width: 640px;
-
   .entry-header {
     @include container-center;
     position: relative;

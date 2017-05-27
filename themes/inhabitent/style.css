@@ -225,7 +225,7 @@ th {
 @font-face {
   font-family: 'novecentosanswide';
   src: url("../../fonts/novecentosanswide-demibold-webfont.eot");
-  src: url("../../fonts/novecentosanswide-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/novecentosanswide-demibold-webfont.woff2") format("woff2"), url("../../fonts/novecentosanswide-demibold-webfont.woff") format("woff"), url("../../fonts/novecentosanswide-demibold-webfont.ttf") format("truetype"), url("../../fonts/novecentosanswide-demibold-webfont.svg#webfontregular") format("svg");
+  src: url("../../fonts/novecentosanswide-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/novecentosanswide-demibold-webfont.svg#webfontregular") format("svg");
   font-weight: bold;
   font-style: normal; }
 
@@ -614,11 +614,19 @@ a {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
+.widget-area {
   margin: 1.5rem;
-  /* Make sure select elements fit in widgets. */ }
-  .widget select {
-    max-width: 100%; }
+  margin-top: 4.5rem; }
+  .widget-area h2 {
+    text-transform: uppercase; }
+  .widget-area .day-of-week {
+    font-weight: bold; }
+  .widget-area ul {
+    margin: 0; }
+    .widget-area ul a {
+      color: #248A83; }
+    .widget-area ul a:hover {
+      color: #2f1339; }
 
 /* Search widget. */
 .widget_search .search-submit {
@@ -725,7 +733,9 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
+.site-detail {
+  width: 1120px; }
+
 /*
  * Hero Banner
  */
@@ -893,7 +903,6 @@ object {
   -ms-flex-align: center;
       align-items: center; }
   .product-section-page .product-sections {
-    width: 1120px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: column nowrap;
@@ -958,7 +967,8 @@ object {
         -ms-flex-align: center;
             align-items: center;
         -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap; }
+            flex-flow: row nowrap;
+        width: 23.5%; }
         .product-section-page .product-sections .all-product-here .product .entry-header {
           display: -ms-flexbox;
           display: flex;
@@ -966,8 +976,7 @@ object {
               flex-flow: column wrap;
           border: 1px solid #e1e1e1; }
           .product-section-page .product-sections .all-product-here .product .entry-header img {
-            height: 15rem;
-            width: 15rem; }
+            height: 15rem; }
           .product-section-page .product-sections .all-product-here .product .entry-header .entry-title {
             display: -ms-flexbox;
             display: flex;

@@ -33,7 +33,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="footer-logo"></div>
+					<a class="footer-logo" href="<?php echo get_home_url(); ?>"></a>	
 				</div>	
 				<div class="site-info">
 					<p>COPYRIGHT &copy 2016 INHABITENT</p>
