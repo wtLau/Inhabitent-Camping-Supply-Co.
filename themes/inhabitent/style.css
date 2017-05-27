@@ -859,6 +859,40 @@ object {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center; }
+    .product-section-page .product-sections .page-header {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+      border-bottom: 1px dashed #c8c8c8;
+      width: 1120px; }
+      .product-section-page .product-sections .page-header h1 {
+        text-transform: uppercase; }
+      .product-section-page .product-sections .page-header .product-type-name {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        width: 300px; }
+        .product-section-page .product-sections .page-header .product-type-name a {
+          color: #248A83;
+          text-transform: uppercase; }
+          .product-section-page .product-sections .page-header .product-type-name a:hover {
+            color: #2f1339; }
     .product-section-page .product-sections .all-product-here {
       display: -ms-flexbox;
       display: flex;
@@ -869,7 +903,9 @@ object {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
       -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
+          flex-flow: row wrap;
+      padding-top: 3rem;
+      padding-bottom: 4.5rem; }
       .product-section-page .product-sections .all-product-here .product {
         display: -ms-flexbox;
         display: flex;

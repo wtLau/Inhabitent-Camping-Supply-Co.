@@ -19,7 +19,23 @@ get_header(); ?>
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
 							the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						?>
-					</header><!-- .page-header -->
+						<div class="product-type-name">
+							<?php $product_types = get_terms(
+              	array( 
+									'taxonomy' => 'product-type',
+									'hide_empty' => 0,
+              	)); 
+							if ( !empty($product_types) && !is_wp_error($product_types)) : ?>
+								<?php foreach ( $product_types as $product_type ) : ?>
+									<a href="<?php echo get_term_link($product_type); ?>">
+										<p>
+											<?php echo $product_type->name;?>
+										</p>							
+									</a>
+									<?php endforeach; ?>
+								<?php endif; ?>
+							</div>
+						</header><!-- .page-header -->
 
 					<div class="all-product-here">
 						<?php while ( have_posts() ) : the_post(); ?>
