@@ -23,7 +23,7 @@ get_header(); ?>
 
 						<div class="entry-content">
  							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-							<h4>$<?php echo CFS()->get( 'price' ); ?></h4> 
+							<p>$<?php echo CFS()->get( 'price' ); ?></p> 
 							<?php the_content(); ?>
 							<?php
 								wp_link_pages( array(

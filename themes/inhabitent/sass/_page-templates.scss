@@ -261,9 +261,10 @@
       width: $body-width;      
       h1 {
         color: $color-organe;
+        text-transform: uppercase;
       }
-      h4 {
-
+      p {
+        font-family: $font__accent;
       }
     }
   }
