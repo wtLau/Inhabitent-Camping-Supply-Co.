@@ -23,7 +23,7 @@ get_header(); ?>
 
 						<div class="entry-content">
  							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-							<p>$<?php echo CFS()->get( 'price' ); ?></p> 
+							<p class="dollar-sign">$<?php echo CFS()->get( 'price' ); ?></p> 
 							<?php the_content(); ?>
 							<?php
 								wp_link_pages( array(
@@ -31,6 +31,16 @@ get_header(); ?>
 									'after'  => '</div>',
 								) );
 							?>
+							<div class="social-buttons">
+								<a href="www.facebook.com">
+									<p><i class="fa fa-facebook" aria-hidden="true"></i> Like</p>
+								</a>
+								<a href="www.twitter.com">
+									<p><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</p>
+								</a>
+								<a href="www.pinterest.com">
+									<p><i class="fa fa-pinterest" aria-hidden="true"></i> Pin</p>	
+								</a>			
 						</div><!-- .entry-content -->
 
 						<footer class="entry-footer">
