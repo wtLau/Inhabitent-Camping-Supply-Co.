@@ -107,7 +107,7 @@ function about_background() {
 	$background = CFS()->get( 'background_image' ); 
 	$custom_css = "
 		.about-title{
-			background: url({$background}), linear-gradient(rgba(0,0,0, .4),rgba(0,0,0, .4)), no-repeat;
+			background: linear-gradient(rgba(0,0,0, .4),rgba(0,0,0, .4)), url({$background}), no-repeat;
 		background-size: cover, cover;
     background-position: center bottom;
 		}";

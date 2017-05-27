@@ -279,10 +279,10 @@
 
 .post {
   margin: $base__space-unit*2;
+  margin-right: 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  width: 640px;
   .entry-header {
     @include container-center;
     position: relative;
@@ -314,6 +314,7 @@
   }
   .entry-content {
     margin: 0 0;
+    width: 40rem;
     p {
       margin: 0 0;
       margin-top: $base__space-unit/2;
@@ -375,6 +376,7 @@
   justify-content: space-around;
   padding-top: $margin-page-top;
   .post-findus {
+    margin-top: $base__space-unit;
     margin-left: 4.5rem;
     display: flex;
     justify-content: flex-start;
@@ -388,6 +390,9 @@
         background-image: none;
         height: initial;
         display: initial;
+        h1 {
+          margin-bottom: 0;
+        }
         .entry-title {
           text-transform: uppercase;
           color: black;
@@ -397,6 +402,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        width: 40rem;
         .entry-content {
           margin: 0;
           h2 {

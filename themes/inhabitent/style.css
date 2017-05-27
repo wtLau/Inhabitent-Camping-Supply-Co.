@@ -616,7 +616,10 @@ a {
 --------------------------------------------------------------*/
 .widget-area {
   margin: 1.5rem;
-  margin-top: 4.5rem; }
+  margin-top: 4.5rem;
+  padding-left: 1.5rem; }
+  .widget-area .widget {
+    width: 17rem; }
   .widget-area h2 {
     text-transform: uppercase; }
   .widget-area .day-of-week {
@@ -1053,13 +1056,13 @@ object {
 /* Journal */
 .post {
   margin: 3rem;
+  margin-right: 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
   -ms-flex-align: start;
-      align-items: flex-start;
-  width: 640px; }
+      align-items: flex-start; }
   .post .entry-header {
     display: -ms-flexbox;
     display: flex;
@@ -1100,7 +1103,8 @@ object {
       color: #fff;
       text-transform: uppercase; }
   .post .entry-content {
-    margin: 0 0; }
+    margin: 0 0;
+    width: 40rem; }
     .post .entry-content p {
       margin: 0 0;
       margin-top: 0.75rem; }
@@ -1157,6 +1161,7 @@ object {
       justify-content: space-around;
   padding-top: 1.5rem; }
   .site-detail .post-findus {
+    margin-top: 1.5rem;
     margin-left: 4.5rem;
     display: -ms-flexbox;
     display: flex;
@@ -1177,6 +1182,8 @@ object {
         background-image: none;
         height: initial;
         display: initial; }
+        .site-detail .post-findus .post-27 .entry-header h1 {
+          margin-bottom: 0; }
         .site-detail .post-findus .post-27 .entry-header .entry-title {
           text-transform: uppercase;
           color: black; }
@@ -1186,7 +1193,8 @@ object {
         -ms-flex-pack: start;
             justify-content: flex-start;
         -ms-flex-align: start;
-            align-items: flex-start; }
+            align-items: flex-start;
+        width: 40rem; }
         .site-detail .post-findus .post-27 .container .entry-content {
           margin: 0; }
           .site-detail .post-findus .post-27 .container .entry-content h2 {

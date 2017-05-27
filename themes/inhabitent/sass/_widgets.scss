@@ -5,6 +5,10 @@
 .widget-area {
 	margin: $base__space-unit;
 	margin-top: $base__space-unit*3;
+	padding-left: $base__space-unit;
+	.widget {
+		width: 17rem;
+	}
 	h2 {
 		text-transform: uppercase;
 	}
