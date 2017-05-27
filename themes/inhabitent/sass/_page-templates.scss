@@ -101,12 +101,13 @@
       .post-info-wrapper {
         @include display-column;
         height: 11rem;
-        padding: $base__space-unit/2 $base__space-unit/4;
+        padding: $base__space-unit/2 $base__space-unit/2;
         border: 1px solid #e1e1e1;
         border-top: 5px solid #e1e1e1;
         p {
           margin: 0;
           padding: 0;
+          display: inline-block;
         }
         .entry-meta p {
           color: $color-grey-medium;
@@ -143,6 +144,56 @@
     }
   }
 }  
+
+
+/*
+ **SHOP
+ */
+
+ .product-section-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .product-sections {
+    width: $body-width;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    .page-header{
+    }
+    .all-product-here {
+      @include display-column;
+      flex-flow: row wrap;
+      .product {
+        @include container-center;
+        .entry-header {
+          display: flex;
+          flex-flow: column wrap;
+          @include solid-border;
+          img {
+            height: 15rem;
+            width: 15rem;
+          }  
+          .entry-title {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            padding: $base__space-unit/2;
+            p {
+              margin: 0;
+            }
+          }
+        }  
+      }
+    }
+  }
+ }
+ 
+
+
+
+
 /* Journal */
 
 .post {
@@ -188,12 +239,21 @@
       margin-top: $base__space-unit/2;
     }
   }
-  .read-more a {
-    color: $color__text-main;
-    p {
-      padding: $base__space-unit/4 $base__space-unit/2;
+  .read-more {
       border: $base__space-unit solid 1px;
-      margin: none;
+      margin-top: $base__space-unit;
+    &:hover {
+      background-color: $color__background-post;
+      a {
+        color: $color__background-body;
+      }
+    }
+    a {
+      color: $color__text-main;
+    }
+    p {
+      margin: $base__space-unit/4 $base__space-unit;
+
     }
   }
 }
