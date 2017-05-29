@@ -134,11 +134,9 @@
               margin: none;
             }
           }
-          &:hover {
+          p:hover {
             background: $color__background-post;
-            p {
-              color: $color__background-body;
-            }
+            color: $color__background-body;
           }
         }
       }  
@@ -286,6 +284,9 @@
   .entry-header {
     @include container-center;
     position: relative;
+    h1 {
+      color: $color__background-body;
+    }
     .entry-title {
       @include container-center;
       justify-content: initial;
@@ -321,7 +322,7 @@
     }
   }
   .read-more {
-      border: $base__space-unit solid 1px;
+      border: #000 solid 1px;
       margin-top: $base__space-unit;
     &:hover {
       background-color: $color__background-post;
@@ -334,7 +335,6 @@
     }
     p {
       margin: $base__space-unit/4 $base__space-unit;
-
     }
   }
 }
@@ -371,6 +371,12 @@
 }  
 
 /* Find Us */
+.archvie, .single, .page-template-findus, .blog{
+  .site-content {
+    display: flex;
+    justify-content: center;
+  }
+}
 .site-detail {
   display: flex;
   justify-content: space-around;

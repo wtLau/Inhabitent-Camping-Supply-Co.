@@ -29,11 +29,14 @@
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header-logo"><h1>Inhabitent</h1></a>
+					<div clas="nav-menu">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</div>	
+					<?php if (is_page('home') || is_page('about')){ ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header-logo"><h1>Inhabitent</h1></a>
+					<?php }else{ ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header-logo-tent"><h1>Inhabitent</h1></a>
+					<?php } ?>
 				</nav><!-- #site-navigation -->
 
 				<!--code for seach goes here-->
