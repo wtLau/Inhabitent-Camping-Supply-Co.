@@ -14,6 +14,11 @@ themes/*
 !themes/inhabitent/
 # Ignore packages #
 themes/inhabitent/node_modules/
+themes/inhabitent/images/adventure-photo
+themes/inhabitent/images/blog-photo
+themes/inhabitent/images/product-photo
+
+
 
 # Ignore OS files #
 .DS_Store
