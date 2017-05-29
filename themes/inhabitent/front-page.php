@@ -38,6 +38,7 @@ get_header(); ?>
               
               <article class="products-display">
                 <!--<img class="product-type-icon" id="<?php echo uniqid(1) ?>"> -->
+                <img src= “<?php echo get_template_directory_uri() . '/../../images/product-type-icons/' . $product_type->name . '.svg';?>“>
                 <p>
                   <?php echo $product_type->description;?>
                 </p>
@@ -92,7 +93,13 @@ get_header(); ?>
                 </div>  
               <?php endforeach; wp_reset_postdata(); ?>
             </ul>
-          </section>  
+          </section>
+
+          <!--adventure section-->
+          <section class="journal-section">
+            <h1>Lastest Adventure</h1>
+            
+          </section>
 
 			<?php endwhile; ?>
 

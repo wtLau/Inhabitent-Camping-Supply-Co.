@@ -276,8 +276,7 @@
 /* Journal */
 
 .post {
-  margin: $base__space-unit*2;
-  margin-right: 0;
+  margin: $base__space-unit*2 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -371,7 +370,7 @@
 }  
 
 /* Find Us */
-.archvie, .single, .page-template-findus, .blog{
+.archvie, .single, .page-template-findus, .blog, .error404{
   .site-content {
     display: flex;
     justify-content: center;
@@ -379,11 +378,10 @@
 }
 .site-detail {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: $margin-page-top;
   .post-findus {
     margin-top: $base__space-unit;
-    margin-left: 4.5rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -483,5 +481,24 @@
         }
       }
     }
+  }
+}
+
+// Error 404
+
+.error-404 {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: $base__space-unit*2 0;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    text-transform: uppercase;
+  }
+  a {
+    color: $color__background-post;
   }
 }

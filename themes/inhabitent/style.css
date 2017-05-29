@@ -490,10 +490,11 @@ a {
 /* Menus */
 .site-header {
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   width: 100%;
   /* Small menu. */ }
   .site-header .main-navigation-dark {
+    background-color: rgba(255, 255, 255, 0.85);
     border-bottom: 1px solid #e1e1e1; }
     .site-header .main-navigation-dark #primary-menu-dark {
       display: -ms-flexbox;
@@ -505,11 +506,19 @@ a {
     display: flex;
     -ms-flex-flow: row-reverse wrap;
         flex-flow: row-reverse wrap;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    -ms-flex-pack: center;
+        justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    padding: 5px 6rem; }
+    padding: 5px 0; }
+    .site-header .main-navigation .nav-container, .site-header .main-navigation-dark .nav-container {
+      width: 1120px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
     .site-header .main-navigation li, .site-header .main-navigation-dark li {
       padding-left: 1.5rem;
       text-transform: uppercase; }
@@ -645,7 +654,9 @@ a {
   .widget-area .day-of-week {
     font-weight: bold; }
   .widget-area ul {
-    margin: 0; }
+    margin: 0;
+    list-style: none;
+    padding: 0; }
     .widget-area ul a {
       color: #248A83; }
     .widget-area ul a:hover {
@@ -1074,8 +1085,7 @@ object {
 
 /* Journal */
 .post {
-  margin: 3rem;
-  margin-right: 0;
+  margin: 3rem 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
@@ -1175,7 +1185,7 @@ object {
         text-transform: uppercase; }
 
 /* Find Us */
-.archvie .site-content, .single .site-content, .page-template-findus .site-content, .blog .site-content {
+.archvie .site-content, .single .site-content, .page-template-findus .site-content, .blog .site-content, .error404 .site-content {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -1184,12 +1194,11 @@ object {
 .site-detail {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   padding-top: 1.5rem; }
   .site-detail .post-findus {
     margin-top: 1.5rem;
-    margin-left: 4.5rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: start;
@@ -1290,3 +1299,18 @@ object {
             text-decoration: none;
             color: #fff;
             margin-bottom: 0.75rem; }
+
+.error-404 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  padding: 3rem 0; }
+  .error-404 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .error-404 h1 {
+    text-transform: uppercase; }
+  .error-404 a {
+    color: #248A83; }
