@@ -37,8 +37,8 @@ get_header(); ?>
               <?php foreach ( $product_types as $product_type ) : ?>
               
               <article class="products-display">
-                <!--<img class="product-type-icon" id="<?php echo uniqid(1) ?>"> -->
-                <img src= “<?php echo get_template_directory_uri() . '/../../images/product-type-icons/' . $product_type->name . '.svg';?>“>
+
+                <img src= "<?php echo get_template_directory_uri() . '/images/product-type-icons/' . $product_type->name . '.svg'?>">
                 <p>
                   <?php echo $product_type->description;?>
                 </p>

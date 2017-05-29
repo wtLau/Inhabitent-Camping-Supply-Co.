@@ -102,7 +102,7 @@ add_filter('get_the_archive_title', 'inhabitent_archive_title_filter');
 function about_background() {
  wp_enqueue_style(
 	'custom-style',
-	get_template_directory_uri() . 'build/css/style.min.css'
+	get_template_directory_uri() . '/build/css/style.min.css'
 	);
 	$background = CFS()->get( 'background_image' ); 
 	$custom_css = "
