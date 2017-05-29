@@ -493,7 +493,14 @@ a {
   position: absolute;
   width: 100%;
   /* Small menu. */ }
-  .site-header .main-navigation {
+  .site-header .main-navigation-dark {
+    border-bottom: 1px solid #e1e1e1; }
+    .site-header .main-navigation-dark #primary-menu-dark {
+      display: -ms-flexbox;
+      display: flex; }
+      .site-header .main-navigation-dark #primary-menu-dark li a {
+        color: #248A83; }
+  .site-header .main-navigation, .site-header .main-navigation-dark {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: row-reverse wrap;
@@ -503,38 +510,40 @@ a {
     -ms-flex-align: center;
         align-items: center;
     padding: 5px 6rem; }
-    .site-header .main-navigation li {
+    .site-header .main-navigation li, .site-header .main-navigation-dark li {
       padding-left: 1.5rem;
       text-transform: uppercase; }
-    .site-header .main-navigation ul {
+    .site-header .main-navigation ul, .site-header .main-navigation-dark ul {
       display: none;
       list-style: none;
       margin: 0;
       padding-left: 0; }
-      .site-header .main-navigation ul ul {
+      .site-header .main-navigation ul ul, .site-header .main-navigation-dark ul ul {
         box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
         float: left;
         position: absolute;
         top: 1.5rem;
         left: -999rem;
         z-index: 99999; }
-        .site-header .main-navigation ul ul ul {
+        .site-header .main-navigation ul ul ul, .site-header .main-navigation-dark ul ul ul {
           left: -999rem;
           top: 0; }
-        .site-header .main-navigation ul ul li {
+        .site-header .main-navigation ul ul li, .site-header .main-navigation-dark ul ul li {
           padding-left: 1.5rem; }
           .site-header .main-navigation ul ul li:hover > ul,
-          .site-header .main-navigation ul ul li.focus > ul {
+          .site-header .main-navigation ul ul li.focus > ul, .site-header .main-navigation-dark ul ul li:hover > ul,
+          .site-header .main-navigation-dark ul ul li.focus > ul {
             left: 100%; }
-        .site-header .main-navigation ul ul a {
+        .site-header .main-navigation ul ul a, .site-header .main-navigation-dark ul ul a {
           width: 200px; }
       .site-header .main-navigation ul li:hover > ul,
-      .site-header .main-navigation ul li.focus > ul {
+      .site-header .main-navigation ul li.focus > ul, .site-header .main-navigation-dark ul li:hover > ul,
+      .site-header .main-navigation-dark ul li.focus > ul {
         left: auto; }
-    .site-header .main-navigation li {
+    .site-header .main-navigation li, .site-header .main-navigation-dark li {
       float: left;
       position: relative; }
-    .site-header .main-navigation a {
+    .site-header .main-navigation a, .site-header .main-navigation-dark a {
       display: block;
       text-decoration: none;
       color: #fff; }
@@ -624,9 +633,11 @@ a {
 # Widgets
 --------------------------------------------------------------*/
 .widget-area {
-  margin: 1.5rem;
-  margin-top: 4.5rem;
-  padding-left: 1.5rem; }
+  margin: .9rem;
+  margin-bottom: 0;
+  padding-left: 4.5rem;
+  padding-top: 3rem;
+  border-left: 1px solid #e1e1e1; }
   .widget-area .widget {
     width: 17rem; }
   .widget-area h2 {

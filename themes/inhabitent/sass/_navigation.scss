@@ -55,8 +55,17 @@ a {
 .site-header {
 	background-color: transparent;
 	position: absolute;
-	width: 100%;  
-	.main-navigation {
+	width: 100%; 
+	.main-navigation-dark {
+		border-bottom: $solid-border;
+		#primary-menu-dark {
+			display: flex;
+			li a{
+				color: $color__background-post;
+			}	
+		}
+	}	
+	.main-navigation, .main-navigation-dark {
 		display: flex;
 		flex-flow: row-reverse wrap;
 		justify-content: space-between;

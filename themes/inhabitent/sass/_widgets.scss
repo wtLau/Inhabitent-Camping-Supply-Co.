@@ -3,9 +3,11 @@
 --------------------------------------------------------------*/
 
 .widget-area {
-	margin: $base__space-unit;
-	margin-top: $base__space-unit*3;
-	padding-left: $base__space-unit;
+	margin: .9rem;
+	margin-bottom: 0;
+	padding-left: $base__space-unit*3;
+	padding-top: $base__space-unit*2;
+	border-left: $solid-border;
 	.widget {
 		width: 17rem;
 	}

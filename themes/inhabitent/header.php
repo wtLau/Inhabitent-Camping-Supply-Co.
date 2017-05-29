@@ -28,14 +28,18 @@
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<div clas="nav-menu">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					</div>	
-					<?php if (is_page('home') || is_page('about')){ ?>
+				<?php if (is_page('home') || is_page('about')){ ?>
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<div clas="nav-menu">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						</div>	
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header-logo"><h1>Inhabitent</h1></a>
 					<?php }else{ ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header-logo-tent"><h1>Inhabitent</h1></a>
+					<nav id="site-navigation" class="main-navigation-dark" role="navigation">	
+						<div clas="nav-menu">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu-dark' ) ); ?>
+						</div>	
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header-logo-tent"><h1>Inhabitent</h1></a>
 					<?php } ?>
 				</nav><!-- #site-navigation -->
 
