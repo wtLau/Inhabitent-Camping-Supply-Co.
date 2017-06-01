@@ -61,8 +61,11 @@ a {
 		border-bottom: $solid-border;
 		#primary-menu-dark {
 			display: flex;
-			li a{
+			a{
 				color: $color__background-post;
+			}
+			a:hover {
+				color: $color-purple;
 			}	
 		}
 	}	
@@ -77,6 +80,19 @@ a {
 			display: flex;
 			flex-flow: row-reverse nowrap;
 			justify-content: space-between;
+			.nav-menu {
+				display: flex;
+				#serch-icon {
+					padding-left: 1.5rem;
+				}
+				#serch-icon-dark {
+					color: $color__background-post;
+					padding-left: 1.5rem;
+				}
+				#serch-icon-dark:hover {
+					color: $color-purple;
+				}
+			}
 		}
 		li {
 			padding-left: $base__space-unit;
@@ -131,6 +147,9 @@ a {
 			display: block;
 			text-decoration: none;
 			color: #fff;
+		}
+		a:hover {
+			color: $color-yellow;
 		}
 		.current_page_item > a,
 		.current-menu-item > a,

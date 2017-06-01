@@ -499,8 +499,10 @@ a {
     .site-header .main-navigation-dark #primary-menu-dark {
       display: -ms-flexbox;
       display: flex; }
-      .site-header .main-navigation-dark #primary-menu-dark li a {
+      .site-header .main-navigation-dark #primary-menu-dark a {
         color: #248A83; }
+      .site-header .main-navigation-dark #primary-menu-dark a:hover {
+        color: #2f1339; }
   .site-header .main-navigation, .site-header .main-navigation-dark {
     display: -ms-flexbox;
     display: flex;
@@ -519,6 +521,16 @@ a {
           flex-flow: row-reverse nowrap;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+      .site-header .main-navigation .nav-container .nav-menu, .site-header .main-navigation-dark .nav-container .nav-menu {
+        display: -ms-flexbox;
+        display: flex; }
+        .site-header .main-navigation .nav-container .nav-menu #serch-icon, .site-header .main-navigation-dark .nav-container .nav-menu #serch-icon {
+          padding-left: 1.5rem; }
+        .site-header .main-navigation .nav-container .nav-menu #serch-icon-dark, .site-header .main-navigation-dark .nav-container .nav-menu #serch-icon-dark {
+          color: #248A83;
+          padding-left: 1.5rem; }
+        .site-header .main-navigation .nav-container .nav-menu #serch-icon-dark:hover, .site-header .main-navigation-dark .nav-container .nav-menu #serch-icon-dark:hover {
+          color: #2f1339; }
     .site-header .main-navigation li, .site-header .main-navigation-dark li {
       padding-left: 1.5rem;
       text-transform: uppercase; }
@@ -556,6 +568,8 @@ a {
       display: block;
       text-decoration: none;
       color: #fff; }
+    .site-header .main-navigation a:hover, .site-header .main-navigation-dark a:hover {
+      color: #f0e4d1; }
   .site-header .menu-toggle,
   .site-header .main-navigation.toggled ul {
     display: block; }

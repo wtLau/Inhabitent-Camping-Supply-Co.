@@ -31,17 +31,23 @@
 				<?php if (is_page('home') || is_page('about')){ ?>
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<div class="nav-container">
-							<div clas="nav-menu">
+							<div class="nav-menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+								<a id="serch-icon" href="">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</a>
 							</div>	
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header-logo"><h1>Inhabitent</h1></a>
 						</div>		
 					<?php }else{ ?>
 					
 					<nav id="site-navigation" class="main-navigation-dark" role="navigation">	
-						<div class="nav-container">						
-							<div clas="nav-menu">
+						<div class="nav-container">		
+							<div class="nav-menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu-dark' ) ); ?>
+								<a id="serch-icon-dark" href="">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</a>
 							</div>	
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header-logo-tent"><h1>Inhabitent</h1></a>
 						</div>	
@@ -49,8 +55,6 @@
 				</nav><!-- #site-navigation -->
 
 				<!--code for seach goes here-->
-
-
 				
 			</header><!-- #masthead -->
 
