@@ -82,15 +82,38 @@ a {
 			justify-content: space-between;
 			.nav-menu {
 				display: flex;
-				#serch-icon {
+				font-family:$font__accent;
+				form {
 					padding-left: 1.5rem;
-				}
-				#serch-icon-dark {
-					color: $color__background-post;
-					padding-left: 1.5rem;
-				}
-				#serch-icon-dark:hover {
-					color: $color-purple;
+					fieldset {
+						border: none;
+						margin: 0;
+						padding: 0;
+						input {
+							border: none;
+							padding: 0;
+							background: initial;
+							color: $color-yellow;
+							outline: none;
+						}
+						input::placeholder {
+								color: $color-yellow; 
+								font-weight: normal;
+								text-transform: uppercase;
+							}
+						button {
+							border: none;
+							color: $color__background-body;
+							background: initial;
+							box-shadow: none; 
+							font-size: inherit;
+							padding: 0;
+							text-shadow: initial;
+						}
+						button:hover {
+							color:$color-yellow;
+						}
+					}
 				}
 			}
 		}

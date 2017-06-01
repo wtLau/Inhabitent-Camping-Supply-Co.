@@ -523,14 +523,42 @@ a {
           justify-content: space-between; }
       .site-header .main-navigation .nav-container .nav-menu, .site-header .main-navigation-dark .nav-container .nav-menu {
         display: -ms-flexbox;
-        display: flex; }
-        .site-header .main-navigation .nav-container .nav-menu #serch-icon, .site-header .main-navigation-dark .nav-container .nav-menu #serch-icon {
+        display: flex;
+        font-family: novecentosanswide, sans-serif; }
+        .site-header .main-navigation .nav-container .nav-menu form, .site-header .main-navigation-dark .nav-container .nav-menu form {
           padding-left: 1.5rem; }
-        .site-header .main-navigation .nav-container .nav-menu #serch-icon-dark, .site-header .main-navigation-dark .nav-container .nav-menu #serch-icon-dark {
-          color: #248A83;
-          padding-left: 1.5rem; }
-        .site-header .main-navigation .nav-container .nav-menu #serch-icon-dark:hover, .site-header .main-navigation-dark .nav-container .nav-menu #serch-icon-dark:hover {
-          color: #2f1339; }
+          .site-header .main-navigation .nav-container .nav-menu form fieldset, .site-header .main-navigation-dark .nav-container .nav-menu form fieldset {
+            border: none;
+            margin: 0;
+            padding: 0; }
+            .site-header .main-navigation .nav-container .nav-menu form fieldset input, .site-header .main-navigation-dark .nav-container .nav-menu form fieldset input {
+              border: none;
+              padding: 0;
+              background: initial;
+              color: #f0e4d1;
+              outline: none; }
+            .site-header .main-navigation .nav-container .nav-menu form fieldset input::-webkit-input-placeholder, .site-header .main-navigation-dark .nav-container .nav-menu form fieldset input::-webkit-input-placeholder {
+              color: #f0e4d1;
+              font-weight: normal;
+              text-transform: uppercase; }
+            .site-header .main-navigation .nav-container .nav-menu form fieldset input:-ms-input-placeholder, .site-header .main-navigation-dark .nav-container .nav-menu form fieldset input:-ms-input-placeholder {
+              color: #f0e4d1;
+              font-weight: normal;
+              text-transform: uppercase; }
+            .site-header .main-navigation .nav-container .nav-menu form fieldset input::placeholder, .site-header .main-navigation-dark .nav-container .nav-menu form fieldset input::placeholder {
+              color: #f0e4d1;
+              font-weight: normal;
+              text-transform: uppercase; }
+            .site-header .main-navigation .nav-container .nav-menu form fieldset button, .site-header .main-navigation-dark .nav-container .nav-menu form fieldset button {
+              border: none;
+              color: #fff;
+              background: initial;
+              box-shadow: none;
+              font-size: inherit;
+              padding: 0;
+              text-shadow: initial; }
+            .site-header .main-navigation .nav-container .nav-menu form fieldset button:hover, .site-header .main-navigation-dark .nav-container .nav-menu form fieldset button:hover {
+              color: #f0e4d1; }
     .site-header .main-navigation li, .site-header .main-navigation-dark li {
       padding-left: 1.5rem;
       text-transform: uppercase; }
