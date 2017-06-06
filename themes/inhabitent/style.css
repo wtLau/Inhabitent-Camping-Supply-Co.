@@ -884,7 +884,8 @@ object {
       margin-left: 0.75rem;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-      border: #a1a1a1 solid 1px;
+      border: #e1e1e1 solid 1px;
+      border-top: #e1e1e1 solid 5px;
       height: 18rem;
       width: 17rem;
       padding: 0.75rem; }
@@ -899,6 +900,9 @@ object {
         .product-section .product-area .products-display a p {
           margin: 0.75rem;
           text-transform: uppercase; }
+  .product-section article:hover {
+    border: #d99054 solid 1px !important;
+    border-top: #d99054 solid 5px !important; }
   .product-section article:nth-last-child(4) {
     margin-left: 0 !important; }
 

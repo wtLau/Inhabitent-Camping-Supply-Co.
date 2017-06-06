@@ -54,7 +54,8 @@
       @include container-center;
       margin-left: $base__space-unit/2;
       flex-flow: column nowrap;
-      border: $color-grey-light solid 1px;
+      border: $color-border-solid solid 1px;
+      border-top: $color-border-solid solid 5px;
       height: 18rem;
       width: 17rem;
       padding: $base__space-unit/2;
@@ -74,6 +75,10 @@
         }
       }
     }
+  }
+  article:hover {
+    border: $color-organe solid 1px !important;
+    border-top: $color-organe solid 5px !important;
   }
   article:nth-last-child(4){
     margin-left: 0 !important;
