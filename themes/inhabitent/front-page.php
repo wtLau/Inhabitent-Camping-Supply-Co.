@@ -22,7 +22,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
 
-          <!--Get products from shop-->
+<!--Get products from shop-->
         <section class="product-section">
           <h1>Shop Stuff</h1>
           <div class="product-area">
@@ -55,7 +55,7 @@ get_header(); ?>
           </div> 
         </section>
 
-          <!--Get post from journal -->
+<!--Get post from journal -->
         <?php $args = array( 
           'post_type' => 'post', 
           'order' => 'ASC', 
