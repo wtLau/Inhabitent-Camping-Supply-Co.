@@ -95,11 +95,31 @@ get_header(); ?>
             </ul>
           </section>
 
-          <!--adventure section-->
-          <section class="journal-section">
-            <h1>Lastest Adventure</h1>
-            
-          </section>
+<!--adventure section-->
+        <section class="adventure-section">
+          <h1>Lastest Adventure</h1>
+          <ul class="adventure-area">
+            <?php $adventure_types = new WP_Query(
+              array( 
+                'post_type' => 'adventure',
+                'hide_empty' => 0,
+                'order' => 'ASC'
+              )); ?>
+
+            <div class="all-adventure-here">
+              <?php if ( $adventure_types->have_posts()): ?>
+						  <?php while ( $adventure_types->have_posts() ) : $adventure_types->the_post(); ?>
+              <li>  
+									<?php the_post_thumbnail( 'large' ); ?>	
+									<div class="content-title">
+										<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+									</div>
+              </li>
+              <?php endwhile ?>
+              <?php wp_reset_postdata(); ?>
+              <?php endif ?>
+          </div> 
+        </section>
 
 			<?php endwhile; ?>
 

@@ -68,6 +68,9 @@ a {
 				color: $color-purple;
 			}	
 		}
+		#fa {
+			color: $color__background-post;
+		}
 	}	
 	.main-navigation, .main-navigation-dark {
 		display: flex;
@@ -83,8 +86,18 @@ a {
 			.nav-menu {
 				display: flex;
 				font-family:$font__accent;
+				justify-content: center;
+				align-items: center;
+				.fa {
+					padding-left: 1rem;
+					color: $color__background-body;
+					padding-bottom: 4px;
+				}
+				.fa:hover {
+					color: $color-yellow;
+				}
 				form {
-					padding-left: 1.5rem;
+					padding-left: .5rem;
 					fieldset {
 						border: none;
 						margin: 0;

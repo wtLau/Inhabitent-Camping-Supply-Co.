@@ -14,28 +14,7 @@ get_header(); ?>
 
 			<section class="adventure-section-page">
 				<div class="adventure-sections">
-					<header class="page-header">
-						<?php
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
-							the_archive_description( '<div class="taxonomy-description">', '</div>' );
-						?>
-						<div class="adventure-type-name">
-							<?php $adventure_types = get_terms(
-              	array( 
-									'taxonomy' => 'adventure-type',
-									'hide_empty' => 0,
-              	)); 
-							if ( !empty($adventure_types) && !is_wp_error($adventure_types)) : ?>
-								<?php foreach ( $adventure_types as $adventure_type ) : ?>
-									<a href="<?php echo get_term_link($adventure_type); ?>">
-										<p>
-											<?php echo $adventure_type->name;?>
-										</p>							
-									</a>
-									<?php endforeach; ?>
-								<?php endif; ?>
-							</div>
-						</header><!-- .page-header -->
+
 
 					<div class="all-adventure-here">
 						<?php while ( have_posts() ) : the_post(); ?>

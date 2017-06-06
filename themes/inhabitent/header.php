@@ -33,6 +33,7 @@
 						<div class="nav-container">
 							<div class="nav-menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+												<i class="fa fa-search"></i>
 								<?php 	get_search_form(); ?>
 							</div>	
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header-logo"><h1>Inhabitent</h1></a>
@@ -43,6 +44,7 @@
 						<div class="nav-container">		
 							<div class="nav-menu">
 								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu-dark' ) ); ?>
+												<i id="fa" class="fa fa-search"></i>
 								<?php 	get_search_form(); ?>
 							</div>	
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="header-logo-tent"><h1>Inhabitent</h1></a>
