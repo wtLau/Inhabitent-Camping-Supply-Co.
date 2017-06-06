@@ -12,24 +12,24 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<section class="product-section-page">
-				<div class="product-sections">
+			<section class="adventure-section-page">
+				<div class="adventure-sections">
 					<header class="page-header">
 						<?php
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
 							the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						?>
-						<div class="product-type-name">
-							<?php $product_types = get_terms(
+						<div class="adventure-type-name">
+							<?php $adventure_types = get_terms(
               	array( 
-									'taxonomy' => 'product-type',
+									'taxonomy' => 'adventure-type',
 									'hide_empty' => 0,
               	)); 
-							if ( !empty($product_types) && !is_wp_error($product_types)) : ?>
-								<?php foreach ( $product_types as $product_type ) : ?>
-									<a href="<?php echo get_term_link($product_type); ?>">
+							if ( !empty($adventure_types) && !is_wp_error($adventure_types)) : ?>
+								<?php foreach ( $adventure_types as $adventure_type ) : ?>
+									<a href="<?php echo get_term_link($adventure_type); ?>">
 										<p>
-											<?php echo $product_type->name;?>
+											<?php echo $adventure_type->name;?>
 										</p>							
 									</a>
 									<?php endforeach; ?>
@@ -37,19 +37,23 @@ get_header(); ?>
 							</div>
 						</header><!-- .page-header -->
 
-					<div class="all-product-here">
+					<div class="all-adventure-here">
 						<?php while ( have_posts() ) : the_post(); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<header class="entry-header">
+								<header class="content-header">
 									<?php if ( has_post_thumbnail() ) : ?>
 										<a href="<?php echo sprintf(esc_url( get_post_permalink() ) ) ?>">
 											<?php the_post_thumbnail( 'large' ); ?>
 										</a>	
 									<?php endif; ?>
-									<div class="entry-title">
+									<div class="content-title">
 										<p><?php the_title(); ?></p>
-										<p>$<?php echo CFS()->get( 'price' ); ?></p>
 									</div>
+                  <div class="read-more">
+                    <a href="<?php echo sprintf( esc_url( get_permalink() ) )?>">
+                      <p>Read More</p>
+                    </a>
+                  </div>
 								</header><!-- .entry-header -->
 
 							</article><!-- #post-## -->
