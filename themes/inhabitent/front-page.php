@@ -98,7 +98,6 @@ get_header(); ?>
 <!--adventure section-->
         <section class="adventure-section">
           <h1>Lastest Adventure</h1>
-          <ul class="adventure-area">
             <?php $adventure_types = new WP_Query(
               array( 
                 'post_type' => 'adventure',
@@ -106,21 +105,28 @@ get_header(); ?>
                 'order' => 'ASC'
               )); ?>
 
-            <div class="all-adventure-here">
-              <?php if ( $adventure_types->have_posts()): ?>
-						  <?php while ( $adventure_types->have_posts() ) : $adventure_types->the_post(); ?>
-              <li>  
-									<?php the_post_thumbnail( 'large' ); ?>	
-									<div class="content-title">
-										<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-									</div>
-              </li>
-              <?php endwhile ?>
+          <div class="all-adventure-here">
+            <?php if ( $adventure_types->have_posts()): ?>
+                <?php while ( $adventure_types->have_posts() ) : $adventure_types->the_post(); ?>
+                  <article id="post-<?php the_ID(); ?>" class="adventure-article">  
+                    <div class="image-gradient">
+                      <?php the_post_thumbnail( 'large' ); ?>	     
+                    </div>
+                    <div class="content-title">
+                      <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                      <div class="read-more">
+                        <a href="<?php echo sprintf( esc_url( get_permalink() ) )?>">
+                          <p>Read More</p>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                <?php endwhile ?>
               <?php wp_reset_postdata(); ?>
-              <?php endif ?>
+            <?php endif ?>
           </div> 
+          <h1><a href="<?php echo get_post_type_archive_link( 'adventure' ); ?>">More Adventure</a></h1>
         </section>
-
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>

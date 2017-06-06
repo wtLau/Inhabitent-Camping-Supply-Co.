@@ -2,7 +2,6 @@
    $('.search-field').hide();
    $('.fa-search').on('click', function(event) {
       event.preventDefault();
-      event.stopPropagation();
       $('.search-field').toggle('slow');
     })
 

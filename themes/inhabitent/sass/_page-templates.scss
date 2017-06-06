@@ -39,6 +39,8 @@
   display: none;
 }
 
+//front-page
+
 .product-section {
   @include container-center; 
   flex-flow: column nowrap;
@@ -148,6 +150,124 @@
     }
   }
 }  
+// Adventure Section
+.adventure-section {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: $base__space-unit*4 0;
+  .all-adventure-here {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: $body-width;
+    height: 560px;
+    position: relative;
+    article {
+      position: relative;
+      overflow: hidden;
+      .image-gradient{
+        display: inline-block;
+        background: linear-gradient(rgba(0,0,0, .4), rgba(0,0,0, .4));
+        z-index: 1;
+      }
+      .content-title {
+        position: absolute;
+        top: 0;
+        padding-left: 2rem;
+        p{
+          border: $color__background-body 1px solid;
+          display: inline-block;
+          padding: $base__space-unit/4 $base__space-unit/2;
+        }
+        p:hover {
+          background-color: $color__background-post;
+          color: $color__background-body;
+        }
+      }
+    }
+    #post-131 {
+      width: 550px;
+      height: 560px;
+      .image-gradient {
+        width: 550px;
+        height: 560px;
+        img {
+          height: 145%;
+          width: auto;
+          left: 50%;
+          top: 70%;
+          transform: translate(-50%, -70%);
+          max-width: none;
+          position: absolute;
+          z-index: -5;
+        }
+      }
+    }
+    #post-134 {
+      width: 550px;
+      height: 270px;
+      .image-gradient {
+        width: 550px;
+        height: 270px;
+        img {
+          height: 280px;
+          height: 145%;
+          width: auto;
+          left: 50%;
+          top: 70%;
+          transform: translate(-50%, -70%);
+          max-width: none;
+          position: absolute;
+          z-index: -5;
+        }
+      }
+    }
+    #post-139 {
+      width: 265px;
+      height: 270px;
+      position: absolute;
+      bottom: 0;
+      right: 280px;
+      .image-gradient {
+        width: 540px;
+        height: 560px;
+        img {
+          height: 145%;
+          width: auto;
+          left: 50%;
+          top: 70%;
+          transform: translate(-50%, -70%);
+          max-width: none;
+          position: absolute;
+          z-index: -5;
+        }
+      }
+    }
+    #post-141 {
+      width: 265px;
+      height: 270px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      .image-gradient {
+        width: 540px;
+        height: 560px;
+        img {
+          height: 145%;
+          width: auto;
+          left: 50%;
+          top: 70%;
+          transform: translate(-50%, -70%);
+          max-width: none;
+          position: absolute;
+          z-index: -5;
+        }
+      }
+    }
+  }
+}
 
 
 /*
