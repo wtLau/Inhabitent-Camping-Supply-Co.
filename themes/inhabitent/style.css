@@ -1373,22 +1373,60 @@ object {
             justify-content: center;
         text-transform: uppercase; }
 
-.error-404 {
+/* 
+ ** Single-Adventure
+  */
+.single-adventure {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  padding: 3rem 0; }
-  .error-404 ul {
-    list-style: none;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .single-adventure .single-product-main {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
     padding: 0;
-    margin: 0; }
-  .error-404 h1 {
-    text-transform: uppercase; }
-  .error-404 a {
-    color: #248A83; }
+    padding-bottom: 3rem; }
+    .single-adventure .single-product-main .type-adventure {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center; }
+      .single-adventure .single-product-main .type-adventure .entry-content {
+        margin: 0;
+        width: 830px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap; }
+        .single-adventure .single-product-main .type-adventure .entry-content .entry-meta {
+          text-transform: uppercase;
+          padding: 2rem 0; }
+        .single-adventure .single-product-main .type-adventure .entry-content .social-buttons {
+          display: -ms-flexbox;
+          display: flex; }
+          .single-adventure .single-product-main .type-adventure .entry-content .social-buttons a {
+            color: #404040;
+            padding-right: 1.5rem; }
+            .single-adventure .single-product-main .type-adventure .entry-content .social-buttons a p {
+              border: black 1px solid;
+              padding: .3rem 2rem; }
+          .single-adventure .single-product-main .type-adventure .entry-content .social-buttons a:hover {
+            color: #fff; }
+            .single-adventure .single-product-main .type-adventure .entry-content .social-buttons a:hover p {
+              background: #248A83;
+              border: none; }
 
-/* Find Us */
+/* 
+ ** Find Us
+  */
 .archvie .site-content, .single .site-content, .page-template-findus .site-content, .blog .site-content, .error404 .site-content {
   display: -ms-flexbox;
   display: flex;
@@ -1440,6 +1478,24 @@ object {
           .site-detail .post-findus .post-27 .container .entry-content h2 {
             display: initial;
             text-transform: uppercase; }
+
+/*
+ ** Error 404
+ */
+.error-404 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  padding: 3rem 0; }
+  .error-404 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .error-404 h1 {
+    text-transform: uppercase; }
+  .error-404 a {
+    color: #248A83; }
 
 /* Footer */
 .site-footer {

@@ -5,7 +5,7 @@
 /*
  **Single Product Page
  */
- 
+
  .single-product-main {
   display: flex;
   justify-content: center;
@@ -91,25 +91,59 @@
   }
 }  
 
-// Error 404
-
-.error-404 {
+/* 
+ ** Single-Adventure
+  */
+.single-adventure {
   display: flex;
-  flex-flow: column nowrap;
-  padding: $base__space-unit*2 0;
-  ul {
-    list-style: none;
+  justify-content: center;
+  .single-product-main {
+    display: flex;
+    justify-content: center;
     padding: 0;
-    margin: 0;
-  }
-  h1 {
-    text-transform: uppercase;
-  }
-  a {
-    color: $color__background-post;
+    padding-bottom: $base__space-unit*2;
+    .type-adventure {
+      display: flex;  
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      .entry-content {
+        margin: 0;
+        width: 830px;
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+        .entry-meta {
+          text-transform: uppercase;
+          padding: 2rem 0;
+        }
+        .social-buttons {
+          display: flex;
+          a {
+            color: $color__text-main;
+            padding-right: 1.5rem;
+            p {
+              border: black 1px solid;
+              padding: .3rem 2rem;
+            }
+          }
+          a:hover {
+            color: $color__background-body;
+            p {
+              background: $color__background-post;
+              border: none;
+            }
+          }
+        }
+      }
+    }
   }
 }
-/* Find Us */
+
+/* 
+ ** Find Us
+  */
+
 .archvie, .single, .page-template-findus, .blog, .error404{
   .site-content {
     display: flex;
@@ -157,4 +191,25 @@
       }
     }    
   }  
+}
+
+/*
+ ** Error 404
+ */
+
+.error-404 {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: $base__space-unit*2 0;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    text-transform: uppercase;
+  }
+  a {
+    color: $color__background-post;
+  }
 }
