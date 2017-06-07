@@ -1,0 +1,160 @@
+/*--------------------------------------------------------------
+# Single Templates
+--------------------------------------------------------------*/
+
+/*
+ **Single Product Page
+ */
+ 
+ .single-product-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: $base__space-unit*2;
+  .product {
+    width: $body-width;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 $base__space-unit;
+    .entry-header{
+      display: block;
+      width: 48%;
+    } 
+    .entry-content {
+      @include display-column;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      width: 48%;      
+      margin-top: 0;
+      h1 {
+        color: $color-organe;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+      }
+      .dollar-sign {
+        font-size: 1.3rem;
+          margin: 0;
+          padding: 0;
+      }
+      .social-buttons {
+        display: flex;
+        flex-flow: row nowrap;
+        a {
+          color: $color__text-main;
+          p:hover {
+            background-color: $color__background-post;
+            color: $color__background-body;
+          }
+          p {
+            border: 1px solid #000;
+            padding: $base__space-unit/5 $base__space-unit;
+            text-transform: uppercase;
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
+ }
+
+
+/* About page */
+
+.post-23 {
+  margin: 0;  
+  .about-title {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .entry-title {
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .entry-content {
+      margin: $base__space-unit*2 $base__space-unit*7;
+      width: $base__space-unit*26;
+      h2 {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+}  
+
+// Error 404
+
+.error-404 {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: $base__space-unit*2 0;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    text-transform: uppercase;
+  }
+  a {
+    color: $color__background-post;
+  }
+}
+/* Find Us */
+.archvie, .single, .page-template-findus, .blog, .error404{
+  .site-content {
+    display: flex;
+    justify-content: center;
+  }
+}
+.site-detail {
+  display: flex;
+  justify-content: space-between;
+  padding-top: $margin-page-top;
+  .post-findus {
+    margin-top: $base__space-unit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .post-27 {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .entry-header {
+        background-image: none;
+        height: initial;
+        display: initial;
+        h1 {
+          margin-bottom: 0;
+        }
+        .entry-title {
+          text-transform: uppercase;
+          color: black;
+        }
+      }
+      .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 40rem;
+        .entry-content {
+          margin: 0;
+          h2 {
+            display: initial;
+            text-transform: uppercase;            
+          }
+        }
+      }
+    }    
+  }  
+}
