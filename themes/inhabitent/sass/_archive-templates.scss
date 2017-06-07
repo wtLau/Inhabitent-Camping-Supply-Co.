@@ -1,0 +1,79 @@
+/*--------------------------------------------------------------
+# Archives Templates
+--------------------------------------------------------------*/
+
+// adventure archives
+
+.adventure-section-page {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .all-adventure-here {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    .adventure-sections {
+      display: flex;
+      justify-content: center;
+      text-transform: uppercase;
+      padding-top: 4rem;
+      margin-bottom: 3rem;
+      font-size: 1.3rem;
+      width: 1120px;
+      border-bottom: $dash-border;
+    }
+    .adventure-grid {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      width: $body-width;
+      position: relative;
+      padding-bottom: $base__space-unit*4;
+      article {
+        position: relative;
+        overflow: hidden;
+        height: 550px;
+        width: 550px;
+        .image-gradient{
+          display: inline-block;
+          background: linear-gradient(rgba(0,0,0, .4), rgba(0,0,0, .4));
+          z-index: 1;
+          width: 550px;
+          height: 550px;
+            img {
+              height: 100%;
+              width: auto;
+              left: 50%;
+              top: 70%;
+              transform: translate(-50%, -70%);
+              max-width: none;
+              position: absolute;
+              z-index: -5;
+            }
+        }
+        .content-title {
+          position: absolute;
+          top: 0;
+          padding-left: 2rem;
+          h1 {
+            font-family: $font__main;
+            font-weight: normal;
+            font-size: 3rem;
+          }
+          p{
+            border: $color__background-body 1px solid;
+            display: inline-block;
+            padding: $base__space-unit/4 $base__space-unit/2;
+          }
+          p:hover {
+            background-color: $color__background-post;
+            color: $color__background-body;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

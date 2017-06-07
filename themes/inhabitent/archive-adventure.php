@@ -13,26 +13,28 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<section class="adventure-section-page">
-				<div class="adventure-sections">
+				<div class="all-adventure-here">
 
-
-					<div class="all-adventure-here">
+					<div class="adventure-sections">
+						<h1>Latest Adventures</h1>
+					</div>
+					<div class="adventure-grid">
 						<?php while ( have_posts() ) : the_post(); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 								<header class="content-header">
-									<?php if ( has_post_thumbnail() ) : ?>
-										<a href="<?php echo sprintf(esc_url( get_post_permalink() ) ) ?>">
-											<?php the_post_thumbnail( 'large' ); ?>
-										</a>	
+									<div class="image-gradient">
+										<?php if ( has_post_thumbnail() ) : ?>
+												<?php the_post_thumbnail( 'large' ); ?>
+									</div>
 									<?php endif; ?>
 									<div class="content-title">
-										<p><?php the_title(); ?></p>
+										<h1><a href="<?php echo sprintf( esc_url( get_permalink() ) )?>"><?php the_title(); ?></a></h1>
+										<div class="read-more">
+											<a href="<?php echo sprintf( esc_url( get_permalink() ) )?>">
+												<p>Read More</p>
+											</a>
+										</div>
 									</div>
-                  <div class="read-more">
-                    <a href="<?php echo sprintf( esc_url( get_permalink() ) )?>">
-                      <p>Read More</p>
-                    </a>
-                  </div>
 								</header><!-- .entry-header -->
 
 							</article><!-- #post-## -->
