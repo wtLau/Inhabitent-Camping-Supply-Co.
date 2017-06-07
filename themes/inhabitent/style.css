@@ -487,6 +487,18 @@ a {
   a a.focus {
     color: #f0e4d1; }
 
+.active {
+  background-color: rgba(255, 255, 255, 0.85); }
+  .active ul {
+    display: -ms-flexbox !important;
+    display: flex !important; }
+  .active a {
+    color: #248A83 !important; }
+  .active i {
+    color: #248A83 !important; }
+  .active form input {
+    color: black !important; }
+
 /* Menus */
 .site-header {
   background-color: transparent;

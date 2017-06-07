@@ -50,7 +50,21 @@ a {
 		color: $color-yellow;
 	}
 }
-
+.active {
+	background-color: hsla(0,0%,100%,.85);
+	ul {
+		display: flex !important;
+	}
+	a {
+		color: $color__background-post !important;
+	}
+	i {
+		color: $color__background-post !important;
+	}
+	form input{
+		color: black !important;
+	}
+}
 /* Menus */
 .site-header {
 	background-color: transparent;
