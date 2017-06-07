@@ -109,7 +109,7 @@ function about_background() {
 		.about-title{
 			background: linear-gradient(rgba(0,0,0, .4),rgba(0,0,0, .4)), url({$background}), no-repeat;
 		background-size: cover, cover;
-    background-position: center bottom;
+    background-position: center center;
 		}";
 	wp_add_inline_style( 'custom-style', $custom_css );
 }

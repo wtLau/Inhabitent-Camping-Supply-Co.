@@ -380,6 +380,7 @@
   .entry-header {
     @include container-center;
     position: relative;
+    z-index: -100;
     h1 {
       color: $color__background-body;
     }
