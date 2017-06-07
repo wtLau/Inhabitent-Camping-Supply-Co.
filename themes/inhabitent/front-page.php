@@ -97,7 +97,7 @@ get_header(); ?>
 
 <!--adventure section-->
         <section class="adventure-section">
-          <h1>Lastest Adventure</h1>
+          <h1 id="title">Lastest Adventure</h1>
             <?php $adventure_types = new WP_Query(
               array( 
                 'post_type' => 'adventure',
@@ -125,7 +125,7 @@ get_header(); ?>
               <?php wp_reset_postdata(); ?>
             <?php endif ?>
           </div> 
-          <h1><a href="<?php echo get_post_type_archive_link( 'adventure' ); ?>">More Adventure</a></h1>
+          <p id="adventure-link"><a href="<?php echo get_post_type_archive_link( 'adventure' ); ?>">More Adventure</a></p>
         </section>
 			<?php endwhile; ?>
 

@@ -153,10 +153,25 @@
 // Adventure Section
 .adventure-section {
   display: flex;
-  justify-content: center;
   flex-flow: column nowrap;
   align-items: center;
-  margin: $base__space-unit*4 0;
+  margin-bottom: $base__space-unit*2;
+  #title {
+    text-transform: uppercase;
+  }
+  #adventure-link{
+    color: $color__background-body;
+    background: $color__background-post;
+    border: $color__background-body 1px solid;
+    text-transform: uppercase;
+    padding: .5rem 2rem;
+  }
+  #adventure-link a:hover {
+    color: $color__background-body;
+  }
+  #adventure-link:hover {
+    background: #19625d;    
+  }
   .all-adventure-here {
     display: flex;
     flex-flow: row wrap;
@@ -176,6 +191,10 @@
         position: absolute;
         top: 0;
         padding-left: 2rem;
+        h1 {
+          font-family: $font__main;
+          font-weight: normal;
+        }
         p{
           border: $color__background-body 1px solid;
           display: inline-block;
@@ -184,12 +203,16 @@
         p:hover {
           background-color: $color__background-post;
           color: $color__background-body;
+          border: none;
         }
       }
     }
     #post-131 {
       width: 550px;
       height: 560px;
+      h1 {
+        font-size: 3rem;
+      }
       .image-gradient {
         width: 550px;
         height: 560px;
@@ -208,6 +231,9 @@
     #post-134 {
       width: 550px;
       height: 270px;
+      h1 {
+        font-size: 2.3rem;
+      }
       .image-gradient {
         width: 550px;
         height: 270px;
@@ -229,7 +255,10 @@
       height: 270px;
       position: absolute;
       bottom: 0;
-      right: 280px;
+      right: 285px;
+      h1 {
+        line-height: 2.7rem;
+      }
       .image-gradient {
         width: 540px;
         height: 560px;
@@ -251,6 +280,9 @@
       position: absolute;
       bottom: 0;
       right: 0;
+      h1 {
+        line-height: 2.7rem;
+      }
       .image-gradient {
         width: 540px;
         height: 560px;
