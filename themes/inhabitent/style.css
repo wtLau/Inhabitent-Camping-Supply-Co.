@@ -1498,6 +1498,64 @@ object {
   .error-404 a {
     color: #248A83; }
 
+/*
+ ** Search Result
+ */
+.search .site-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .search .site-content .content-area {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    width: 1120px; }
+    .search .site-content .content-area .site-main {
+      padding-top: 4rem;
+      width: 700px; }
+      .search .site-content .content-area .site-main button {
+        display: none; }
+      .search .site-content .content-area .site-main input {
+        display: -ms-flexbox !important;
+        display: flex !important; }
+      .search .site-content .content-area .site-main a {
+        color: black; }
+      .search .site-content .content-area .site-main .page-title {
+        font-size: 3rem;
+        text-transform: uppercase;
+        border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 2rem; }
+      .search .site-content .content-area .site-main article .entry-header {
+        display: -ms-flexbox;
+        display: flex; }
+        .search .site-content .content-area .site-main article .entry-header h2 {
+          margin-bottom: 0;
+          font-size: 2rem; }
+        .search .site-content .content-area .site-main article .entry-header a {
+          color: #248A83;
+          text-transform: uppercase; }
+        .search .site-content .content-area .site-main article .entry-header a:hover {
+          color: #2f1339; }
+      .search .site-content .content-area .site-main article .entry-summary {
+        margin: 0; }
+      .search .site-content .content-area .site-main article .read-more {
+        margin: 0; }
+        .search .site-content .content-area .site-main article .read-more p {
+          display: inline-block;
+          text-transform: uppercase;
+          border: 1px solid black;
+          padding: .5rem 1rem;
+          font-size: .8rem;
+          margin: 0; }
+        .search .site-content .content-area .site-main article .read-more p:hover {
+          color: #fff;
+          border: none;
+          background: #248A83; }
+
 /*--------------------------------------------------------------
 # Archives Templates
 --------------------------------------------------------------*/

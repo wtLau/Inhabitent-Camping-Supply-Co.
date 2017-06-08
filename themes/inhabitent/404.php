@@ -20,7 +20,13 @@ get_header(); ?>
 				<div class="page-content">
 					<p><?php echo esc_html( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?' ); ?></p>
 
-					<?php get_search_form(); ?>
+					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+						<fieldset>
+							<label>
+								<input type="search" class="search-field1" placeholder="Type and hit enter..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+							</label>
+						</fieldset>
+					</form>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
